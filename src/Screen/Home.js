@@ -8,14 +8,20 @@ import {
     Link,
     Routes
 } from "react-router-dom";
+import Footer from '../Components/Footer';
+import RightSideBar from '../Components/RightSideBar';
 
 const Home = () => {
     return (
         <>
             <Header />
-            <Routes>
-                <Route exact path="/" element={<HomePage />} />
-            </Routes>
+            <div className='MainContainer'>
+                <Routes>
+                    <Route exact path="/" element={<HomePage />} />
+                </Routes>
+                <RightSideBar />
+            </div>
+            <Footer />
         </>
     )
 }

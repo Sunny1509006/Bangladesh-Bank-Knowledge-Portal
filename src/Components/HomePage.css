@@ -1,3 +1,86 @@
 .HomePageMain {
-    min-height: 700px;
+    min-height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-top: 25vh;
+}
+
+.FirstArticle {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 30px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.TopContentArticle {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+    margin-top: 10px;
+}
+
+.ArticleImageTitle {
+    display: flex;
+    font-size: 14px;
+}
+
+.ArticleImageTitle img {
+    height: 40px;
+    width: 40px;
+    padding-right: 10px;
+}
+
+.TopContentShare {
+    display: flex;
+
+}
+
+.TopContentShare p {
+    font-size: 14px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.ArticleDate {
+    padding: 0px 30px;
+}
+
+.ArticleDate p {
+    font-size: 12px;
+    padding-bottom: 8px;
+}
+
+.ArticleDescription {
+    padding: 0px 30px;
+}
+
+.ArticleDescription p {
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+.ArticleImage img {
+    width: 100%;
+}
+
+.OtherArticles {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0px 30px;
+    margin-bottom: 20px;
+    gap: 20px; 
+
+}
+
+.OtherArticlesEach {
+    width: calc(50% - 40px);
+    flex-direction: column;
+    /* margin: 20px 30px; */
+    
+    
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    
 }

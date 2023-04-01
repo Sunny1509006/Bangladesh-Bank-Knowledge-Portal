@@ -1,0 +1,102 @@
+.FooterMain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.footer_top {
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+
+    padding: 5px 20px;
+    background: var(--primary-color);
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+
+    color: white;
+}
+
+.footer_top p {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.footer_top h3 {
+    margin: 8px 0px;
+}
+
+.Knowledge_portal {
+    width: 30%;
+}
+
+.sharing_div {
+
+}
+
+.sharing_div img {
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.newsletterInput {
+    width: 250px;
+    height: 30px;
+
+    margin-left: -40px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.newsletterInput::-webkit-input-placeholder {
+    /* font-family: FontAwesome; */
+    font-weight: normal;
+    overflow: visible;
+    vertical-align: top;
+    display: inline-block !important;
+    padding-left: 15px;
+    padding-top: 2px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.footer_middle {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 80px );
+    /* padding: 20px; */
+    padding: 5px 40px;
+}
+
+.footer_middle_each {
+    /* margin: 20px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.footer_middle_each img {
+    height: 50px;
+    width: 50px;
+}
+
+.footer_middle_each p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer_below {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: var(--primary-color);
+    color: white;
+    font-size: 12px;
+    padding: 10px 0px;
+}
+
+
+

@@ -1,0 +1,54 @@
+.RightSideBarMain {
+    flex-basis: 15%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 25vh;
+}
+
+.LatestNotices {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.LatestNotices h5 {
+    color: var(--primary-color);
+    padding-bottom: 15px;
+}
+
+.latestNoticesList {
+    display: flex;
+
+}
+
+.latestNoticesList img {
+    height: 30px;
+    width: 30px;
+}
+
+.latestNoticesListTitle {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.latestNoticesListTitle p {
+    font-size: 10px;
+    padding-bottom: 5px;
+}
+
+.ImportantLink {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.ImportantLink h5 {
+    color: var(--primary-color);
+    padding-bottom: 5px;
+}
+
+.ImportantLink p {
+    font-size: 12px;
+    padding: 5px 0px;
+}
