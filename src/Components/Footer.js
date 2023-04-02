@@ -41,15 +41,15 @@ const Footer = () => {
         <div className='footer_middle'>
           <div className='footer_middle_each'>
             <p>Funded By</p>
-            <img src='images/Green_Climate_Fund.png' style={{width: '85px', height: '60px'}}/>
+            <img src='/images/Green_Climate_Fund.png' style={{width: '85px', height: '60px'}}/>
           </div>
           <div className='footer_middle_each'>
             <p>Planning & Implementation</p>
-            <img src='images/BangladeshBank_logo.png' />
+            <img src='/images/BangladeshBank_logo.png' />
           </div>
           <div className='footer_middle_each'>
             <p>System Development</p>
-            <img src='images/dream71_logo.png' style={{width: '75px', height: '40px'}}/>
+            <img src='/images/dream71_logo.png' style={{width: '75px', height: '40px'}}/>
           </div>
         </div>
         <div className='footer_below'>
