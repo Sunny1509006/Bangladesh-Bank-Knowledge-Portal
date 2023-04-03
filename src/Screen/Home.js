@@ -17,6 +17,7 @@ import Presentations from '../Components/Presentations';
 import Circulars from '../Components/Circulars';
 import News from '../Components/News';
 import ArticleContent from '../Components/ArticleContent';
+import Contact from '../Components/Contact';
 
 const Home = () => {
     return (
@@ -32,7 +33,7 @@ const Home = () => {
                     <Route exact path="/presentations" element={<Presentations />} />
                     <Route exact path="/circulars" element={<Circulars />} />
                     <Route exact path="/news" element={<News />} />
-
+                    <Route exact path='/contact' element={<Contact />} />
                 </Routes>
                 <RightSideBar />
             </div>

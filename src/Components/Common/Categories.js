@@ -74,9 +74,10 @@ const Categories = ({ articles, category }) => {
                 <div className='ArticlesContent'>
                     {visibleArticles.map((article, index) => (
                         <div key={index} className="ArticlesContentEach">
-                            <Link to="/articles/1" style={{textDecoration: 'none'}}>
+                            <Link to={"/articles/"+article.user_id} style={{textDecoration: 'none'}}>
                                 <img src="/images/title.png" />
                                 <p ><b >{article.title}</b></p>
+                                <p>Published Date: {article.created_at.slice(0,10)}</p>
                             </Link>
                             <div className='ArticlesContentEachViews'></div>
                             <p style={{ color: 'rgba(0, 0, 0, .75)' }}>12345 views</p>

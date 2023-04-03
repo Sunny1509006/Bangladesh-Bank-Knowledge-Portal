@@ -5,6 +5,7 @@
     width: 100%;
     height: 25vh;
     background: #DEF4FF;
+    z-index: 999;
 }
 
 .Header-images {
