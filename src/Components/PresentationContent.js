@@ -3,13 +3,13 @@ import { useParams } from 'react-router-dom'
 import CategoryContentView from './Common/CategoryContentView'
 import axios from './Axios/axios'
 
-const CircularContent = () => {
+const PresentationContent = () => {
   const params = useParams()
   const [article, setArticle] = useState([])
 
   useEffect(() => {
     axios.get(
-        `/api/notices/${params.id}/`
+        `/api/pptx/${params.id}/`
     )
         .then(res => {
             console.log(res)
@@ -20,10 +20,10 @@ const CircularContent = () => {
         })
 
 }, [params.id])
-
+console.log(params.id)
   return (
-    <CategoryContentView article={article} category={"notices"}/>
+    <CategoryContentView article={article} category={"pptx"}/>
   )
 }
 
-export default CircularContent
+export default PresentationContent

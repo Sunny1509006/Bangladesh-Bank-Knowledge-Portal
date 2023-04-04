@@ -2,7 +2,7 @@ import React from 'react'
 import "./CategoryContentView.css"
 import { FaShareAlt } from 'react-icons/fa'
 
-const CategoryContentView = ({ article }) => {
+const CategoryContentView = ({ article, category }) => {
     return (
         <div className='CategoryContentMain'>
             <div className='CategoryContentInnerView'>
@@ -24,7 +24,7 @@ const CategoryContentView = ({ article }) => {
                 <div className='CategoryContentImage'>
                     {article.image ?
                         <>
-                            <img src={article.image ? article.image : '/images/NoImageFound.png'} />
+                            <img src={"http://139.59.60.50/uploads/"+category+"/"+article.image} />
                             <div dangerouslySetInnerHTML={{ __html: article.description }} />
                         </>
                         :

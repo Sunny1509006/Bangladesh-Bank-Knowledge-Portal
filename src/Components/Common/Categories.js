@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import './Categories.css'
 
 const Categories = ({ articles, category }) => {
+
+    const linkCategory = category.toLowerCase()
+    console.log(typeof(linkCategory))
     const [currentPage, setCurrentPage] = useState(1);
 
     const pageSize = 12;
@@ -74,13 +77,17 @@ const Categories = ({ articles, category }) => {
                 <div className='ArticlesContent'>
                     {visibleArticles.map((article, index) => (
                         <div key={index} className="ArticlesContentEach">
-                            <Link to={"/articles/"+article.user_id} style={{textDecoration: 'none'}}>
-                                <img src="/images/title.png" />
+                            <Link to={"/"+linkCategory+"/"+article.id} style={{textDecoration: 'none'}}>
+                                <img src={article.image? 
+                                "http://139.59.60.50/uploads/"+linkCategory+"/"+article.image
+                            :
+                            "/images/NoImageFound.png"
+                            } />
                                 <p ><b >{article.title}</b></p>
                                 <p>Published Date: {article.created_at.slice(0,10)}</p>
                             </Link>
                             <div className='ArticlesContentEachViews'></div>
-                            <p style={{ color: 'rgba(0, 0, 0, .75)' }}>12345 views</p>
+                            <p style={{ color: 'rgba(0, 0, 0, .75)' }}>{article.count} views</p>
                         </div>
                     ))
                     }

@@ -8,7 +8,7 @@ const Research = () => {
     useEffect(() => {
         const loadPosts = async () => {
           const response = await axios.get(
-            "/api/articles/"
+            "/api/research/"
           );
           console.log(response.data.success);
           setArticles(response.data.success);

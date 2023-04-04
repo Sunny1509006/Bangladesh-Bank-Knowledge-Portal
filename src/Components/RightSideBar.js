@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import "./RightSideBar.css"
 import axios from './Axios/axios';
+import { Link } from 'react-router-dom';
 
 const RightSideBar = () => {
     const [circulars, setCirculars] = useState([]);
@@ -25,10 +26,16 @@ const RightSideBar = () => {
 
                 {circulars.map((circular, index) => (
                     <div className='latestNoticesList' key={index}>
-                        <img src={"http://139.59.60.50/uploads/notice/"+circular.image} />
+                        <Link to={"/circulars/" + circular.id}>
+                            <img src={"http://139.59.60.50/uploads/notice/" + circular.image} />
+                        </Link>
                         <div className='latestNoticesListTitle'>
-                            <p><b>{circular.title}</b></p>
-                            <p>Publish Date: {circular.created_at.slice(0,10)}</p>
+                            <Link to={"/circulars/" + circular.id} style={{
+                                textDecoration: 'none', color: 'black'
+                            }}>
+                                <p><b>{circular.title}</b></p>
+                            </Link>
+                            <p>Publish Date: {circular.created_at.slice(0, 10)}</p>
                         </div>
                     </div>
                 ))}

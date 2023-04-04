@@ -13,7 +13,7 @@ const SearchText = () => {
             // onSubmit={handleSearch} 
             style={{ display: 'flex',  width: '100%' }}>
                 <input style={{
-                    padding: '6px 20px',
+                    padding: '5px 20px',
                     fontFamily: 'Kalpurush',
                 }}
                     type='text'
