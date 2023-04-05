@@ -12,7 +12,7 @@ const ResearchContent = () => {
         `/api/research/${params.id}/`
     )
         .then(res => {
-            console.log(res)
+            console.log(res.data.success)
             setArticle(res.data.success)
         })
         .catch(err => {
@@ -20,6 +20,7 @@ const ResearchContent = () => {
         })
 
 }, [params.id])
+// console.log(article)
 
   return (
     <CategoryContentView article={article} category={"research"} />

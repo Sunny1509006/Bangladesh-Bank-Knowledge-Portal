@@ -24,6 +24,8 @@ import ResearchContent from '../Components/ResearchContent';
 import PresentationContent from '../Components/PresentationContent';
 import NewsContent from '../Components/NewsContent';
 import Faq from '../Components/Faq';
+import ShowSearchText from '../Components/ShowSearchText';
+import ShowSearchContent from '../Components/ShowSearchContent';
 
 const Home = () => {
     return (
@@ -39,13 +41,16 @@ const Home = () => {
                     <Route exact path="/research" element={<Research />} />
                     <Route exact path="/research/:id" element={<ResearchContent />} />
                     <Route exact path="/presentations" element={<Presentations />} />
-                    <Route exact path="/presentations/:id" element={<PresentationContent />} />
+                    <Route exact path="/pptx/:id" element={<PresentationContent />} />
                     <Route exact path="/circulars" element={<Circulars />} />
-                    <Route exact path="/circulars/:id" element={<CircularContent />} />
+                    <Route exact path="/notices/:id" element={<CircularContent />} />
                     <Route exact path="/news" element={<News />} />
                     <Route exact path="/news/:id" element={<NewsContent />} />
                     <Route exact path="/faq" element={<Faq />} />
                     <Route exact path='/contact' element={<Contact />} />
+                    <Route exact path="/search" element={<ShowSearchText />} />
+                    <Route exact path="/search/content/:id" element={<ShowSearchContent />} />
+
                 </Routes>
                 <RightSideBar />
             </div>

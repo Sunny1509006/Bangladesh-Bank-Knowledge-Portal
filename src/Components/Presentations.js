@@ -19,7 +19,7 @@ const Presentations = () => {
       }, []);
 
     return (
-        <Categories category={"Presentations"} articles={articles}/>
+        <Categories category={"Presentations"} articles={articles} linkCategory={"pptx"}/>
     )
 }
 

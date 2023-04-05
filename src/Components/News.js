@@ -19,7 +19,7 @@ const News = () => {
     }, []);
 
   return (
-      <Categories category={"News"} articles={articles}/>
+      <Categories category={"News"} articles={articles} linkCategory={"news"}/>
   )
 }
 

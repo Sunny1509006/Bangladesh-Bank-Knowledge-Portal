@@ -2,9 +2,12 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import './Categories.css'
 
-const Categories = ({ articles, category }) => {
+const Categories = ({ articles, category, linkCategory }) => {
 
-    const linkCategory = category.toLowerCase()
+    // const linkCategory = category.toLowerCase()
+    // if (linkCategory==="circulars"){
+    //     const linkCategory="notices"
+    // }
     console.log(typeof(linkCategory))
     const [currentPage, setCurrentPage] = useState(1);
 

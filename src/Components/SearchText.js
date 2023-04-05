@@ -1,16 +1,15 @@
 import React from 'react';
 import './SearchText.css';
 import {  BsChatRight, BsSearch } from 'react-icons/bs'
-// import useAuth from '../../hooks/authHooks';
+import useAuth from "../hooks/authHooks"
 import { Button } from 'react-bootstrap';
 
 const SearchText = () => {
-    // const { query, setQuery, handleSearch } = useAuth();
-
+    const { query, setQuery, handleSearch } = useAuth();
     return (
         <div style={{ display: 'flex', width: '100%' }}>
             <form 
-            // onSubmit={handleSearch} 
+            onSubmit={handleSearch} 
             style={{ display: 'flex',  width: '100%' }}>
                 <input style={{
                     padding: '5px 20px',
@@ -19,15 +18,15 @@ const SearchText = () => {
                     type='text'
                     placeholder='Search...'
                     className='SearchText'
-                    // value={query}
-                    // onChange={(e) =>
-                    //     setQuery(e.target.value)
-                    // }
+                    value={query}
+                    onChange={(e) =>
+                        setQuery(e.target.value)
+                    }
                 />
                 <Button type="button"
-                    // onClick={handleSearch}
+                    onClick={handleSearch}
                     style={{
-                        marginTop: '2px',
+                        marginTop: '1px',
                         // marginLeft: '20%',
                         position: 'absolute',
                         border: 'none',

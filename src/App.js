@@ -1,11 +1,14 @@
 import React from 'react';
 import Home from './Screen/Home';
+import AuthProvider from './AuthProvider';
 
 function App() {
   return (
-    <div>
-      <Home />
-    </div>
+    <AuthProvider>
+      <div>
+        <Home />
+      </div>
+    </AuthProvider>
   );
 }
 

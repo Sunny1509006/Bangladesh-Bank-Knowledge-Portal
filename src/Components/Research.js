@@ -18,7 +18,7 @@ const Research = () => {
         loadPosts();
       }, []);
     return (
-        <Categories category={"Research"} articles={articles}/>
+        <Categories category={"Research"} articles={articles} linkCategory={"research"}/>
     )
 }
 

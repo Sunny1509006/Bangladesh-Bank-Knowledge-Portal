@@ -20,7 +20,7 @@ const Circulars = () => {
       }, []);
 
     return (
-        <Categories category={"Circulars"} articles={articles}/>
+        <Categories category={"Circulars"} articles={articles} linkCategory={"notices"}/>
     )
 }
 

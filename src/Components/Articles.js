@@ -20,7 +20,7 @@ const Articles = () => {
       }, []);
 
     return (
-        <Categories category={"Articles"} articles={articles}/>
+        <Categories category={"Articles"} articles={articles} linkCategory={"articles"}/>
     )
 }
 
