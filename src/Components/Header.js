@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Header.css'
 import { Link, useMatch } from 'react-router-dom'
 import SearchText from './SearchText';
@@ -25,31 +25,44 @@ function LinkItem({ link }) {
 
     const [showDropdown, setShowDropdown] = useState(false);
 
-    function handleDropdownToggle() {
-        setShowDropdown(!showDropdown);
+    function handleDropdownOpen() {
+            setShowDropdown(true);
     }
+
+    function handleDropdownClose() {
+        setShowDropdown(false);
+        
+    }
+
 
     {
         if (link.name === "About") {
             return (
-                <div>
+                <div onMouseEnter={handleDropdownOpen} onMouseLeave={handleDropdownClose}>
                     <Link to="">
-                        <div onMouseEnter={handleDropdownToggle} onMouseLeave={handleDropdownToggle}>
+                        <div >
                             <a style={{ color: isActiveRoute ? '#72D03B' : '' }}>{link.name}</a>
                         </div>
 
                     </Link>
                     {showDropdown && (
                         <div style={{
-                            // marginTop: '-10px',
+                            marginTop: '-10px',
                             position: 'absolute',
-                            width: '100px',
                             background: '#DEF4FF',
                             boxShadow: '0px 0px 4px #007F40',
-                        }}>
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'left',
+                        }}
+                        // onMouseEnter={handleDropdownOpen} onMouseLeave={handleDropdownClose}
+                        >
                             
-                                <Link to="/bangladesh"><p>Bangladesh</p></Link>
-                                <Link to="/green"><p>Green</p></Link>
+                                <Link to="/bangladeshbank"><p>Bangladesh Bank</p></Link>
+                                <div style={{border: '1px solid rgba(0, 0, 0, 0.5)'}}></div>
+                                <Link to="/greenclimatefund"><p>Green Climate Fund</p></Link>
+                                <div style={{border: '1px solid rgba(0, 0, 0, 0.5)'}}></div>
                                 <Link to="/unops"><p>UNOPS</p></Link>
                            
                         </div>

@@ -26,6 +26,9 @@ import NewsContent from '../Components/NewsContent';
 import Faq from '../Components/Faq';
 import ShowSearchText from '../Components/ShowSearchText';
 import ShowSearchContent from '../Components/ShowSearchContent';
+import AboutBangladeshBank from '../Components/AboutBangladeshBank';
+import AboutGreenClimateFund from '../Components/AboutGreenClimateFund';
+import AboutUNOPS from '../Components/AboutUNOPS';
 
 const Home = () => {
     return (
@@ -50,6 +53,10 @@ const Home = () => {
                     <Route exact path='/contact' element={<Contact />} />
                     <Route exact path="/search" element={<ShowSearchText />} />
                     <Route exact path="/search/content/:id" element={<ShowSearchContent />} />
+                    <Route exact path="/bangladeshbank" element={<AboutBangladeshBank />} />
+                    <Route exact path="/greenclimatefund" element={<AboutGreenClimateFund />} />
+                    <Route exact path="/unops" element={<AboutUNOPS />} />
+
 
                 </Routes>
                 <RightSideBar />
