@@ -59,11 +59,11 @@ function LinkItem({ link }) {
                         // onMouseEnter={handleDropdownOpen} onMouseLeave={handleDropdownClose}
                         >
                             
-                                <Link to="/bangladeshbank"><p>Bangladesh Bank</p></Link>
+                                <Link to="/bangladeshbank" onClick={handleDropdownClose}><p>Bangladesh Bank</p></Link>
                                 <div style={{border: '1px solid rgba(0, 0, 0, 0.5)'}}></div>
-                                <Link to="/greenclimatefund"><p>Green Climate Fund</p></Link>
+                                <Link to="/greenclimatefund" onClick={handleDropdownClose}><p>Green Climate Fund</p></Link>
                                 <div style={{border: '1px solid rgba(0, 0, 0, 0.5)'}}></div>
-                                <Link to="/unops"><p>UNOPS</p></Link>
+                                <Link to="/unops" onClick={handleDropdownClose}><p>UNOPS</p></Link>
                            
                         </div>
                     )}

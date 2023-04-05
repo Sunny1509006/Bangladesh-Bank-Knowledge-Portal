@@ -20,7 +20,7 @@ const AboutUNOPS = () => {
                 boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.25)',
                 padding: '20px',
             }}>
-                <img src="/images/UNOPS.png" style={{ height: '100px', width: '120px' }} />
+                <img src="/images/UNOPS.png" style={{ height: '110px', width: '120px' }} />
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',
