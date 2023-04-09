@@ -2,10 +2,13 @@ import React, { useEffect, useMemo, useState } from 'react'
 import axios from '../Axios/axios';
 import "./Categories.css"
 import { Link } from 'react-router-dom';
+import LoaderImageTitleDateView from '../Loader/LoaderImageTitleDateView';
 
 const HomePageCategory = ({ category }) => {
 
     const [articles, setArticles] = useState([]);
+    const [loading, setLoading] = useState(true);
+
     console.log(articles);
     useEffect(() => {
         const loadPosts = async () => {
@@ -14,6 +17,7 @@ const HomePageCategory = ({ category }) => {
             );
             console.log(response.data.lastFive);
             setArticles(response.data.lastFive);
+            setLoading(false)
 
         };
 
@@ -30,18 +34,41 @@ const HomePageCategory = ({ category }) => {
 
         }}>
             {/* <div className='ArticlesContent'> */}
-                {FilterArticles.map((article, index) => (
-                    <div key={index} className="ArticlesContentEach">
-                        <Link to={"/" + category + "/" + article.id} style={{ textDecoration: 'none' }}>
-                            <img src="/images/title.png" />
-                            <p ><b >{article.title}</b></p>
+            {FilterArticles.map((article, index) => (
+                <div key={index} className="ArticlesContentEach">
+                    {loading ?
+                        // <div style={{
+                        //     width: '100%'
+                        // }}>
+                        //     <Skeleton style={{
+                        //         height: '20vh'
+                        //     }}/>
+                        // </div> 
+                        <LoaderImageTitleDateView />
+                        :
+                        <>
+                            <Link to={"/" + category + "/" + article.id} style={{ textDecoration: 'none' }}>
+
+                                <img src={article.image ?
+                                    "http://139.59.60.50/uploads/" + category + "/" + article.image
+                                    :
+                                    "/images/NoImageFound.png"
+                                } />
+
+                                <p ><b >{article.title}</b></p>
+                            </Link>
                             <p>Published Date: {article.created_at.slice(0, 10)}</p>
-                        </Link>
-                        <div className='ArticlesContentEachViews'></div>
-                        <p style={{ color: 'rgba(0, 0, 0, .75)' }}>{article.count} views</p>
-                    </div>
-                ))
-                }
+                            <div className='ArticlesContentEachViews'></div>
+                            <p style={{ color: 'rgba(0, 0, 0, .75)' }}>{article.count} views</p>
+
+
+                        </>
+                    }
+
+                </div>
+
+            ))
+            }
             {/* </div> */}
         </div>
     )

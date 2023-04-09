@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { AiOutlineRight, AiOutlineDown } from 'react-icons/ai'
+import Skeleton from 'react-loading-skeleton'
 
-const FaqsSingle = ({ question, answer }) => {
+const  FaqsSingle = ({ question, answer }) => {
     const [open, setOpen] = useState(false)
 
     const handleOpen = () => {
@@ -23,7 +24,7 @@ const FaqsSingle = ({ question, answer }) => {
                 border: '1px solid rgba(110, 110, 110, 0.580164)',
 
             }}>
-                {question}
+                {question || <Skeleton />}
                 {open ?
                     <AiOutlineDown onClick={handleOpen} />
                     :

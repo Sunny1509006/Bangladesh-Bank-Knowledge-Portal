@@ -2,14 +2,18 @@ import React, { useState, useEffect, useMemo } from 'react'
 import "./LatestNews.css"
 import axios from './Axios/axios';
 import { Link } from 'react-router-dom';
+// import Skeleton from 'react-loading-skeleton';
+import Skeleton from 'react-loading-skeleton'
 
 const LatestNews = () => {
   const [latestNews, setLatestNews] = useState([]);
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     axios.get('/api/news/')
       .then(response => {
         setLatestNews(response.data.lastFive);
+        setLoading(false)
       })
       .catch(error => console.error(error));
   }, []);
@@ -25,40 +29,53 @@ const LatestNews = () => {
   console.log(oneNews)
   return (
     <div className='LatestNewsMain'>
-      <div
-        style={{
-          backgroundImage: `url(${backImagePath})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+      {loading ?
+        <div style={{
+          // height: '40vh',
           width: '66%',
-          height: '40vh',
-          display: 'flex',
-        }}
-      >
+          // background: 'white',
+        }}>
+          <Skeleton style={{
+            height: '40vh'
+          }} />
+        </div>
+        :
+
         <div
           style={{
-            backgroundColor: 'rgba(0,0,0,0.6)',
-            color: 'white',
-            width: '100%',
+            backgroundImage: `url(${backImagePath})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            width: '66%',
+            height: '40vh',
             display: 'flex',
-            flexDirection: 'column',
           }}
         >
-          <Link to={"/news/"+oneID} style={{textDecoration: 'none', color: 'white'}}>
+          <div
+            style={{
+              backgroundColor: 'rgba(0,0,0,0.6)',
+              color: 'white',
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+            }}
+          >
+            <Link to={"/news/" + oneID} style={{ textDecoration: 'none', color: 'white' }}>
+              <p style={{
+                marginTop: '30vh',
+                padding: '4px 20px',
+                fontSize: '12px',
+              }}>
+                <b>{oneTitle}</b>
+              </p>
+            </Link>
             <p style={{
-              marginTop: '30vh',
-              padding: '4px 20px',
+              padding: '0px 20px',
               fontSize: '12px',
-            }}>
-              <b>{oneTitle}</b>
-            </p>
-          </Link>
-          <p style={{
-            padding: '0px 20px',
-            fontSize: '12px',
-          }}>Published Date: {oneDate}</p>
+            }}>Published Date: {oneDate}</p>
+          </div>
         </div>
-      </div>
+      }
       <div style={{
         width: '32%',
         display: 'flex',
@@ -75,10 +92,24 @@ const LatestNews = () => {
             <Link to={"/news/" + news.id} style={{
               width: '25%',
             }}>
-              <img src={"http://139.59.60.50/uploads/news/" + news.image} style={{
-                width: '100%',
-                height: '7.4vh',
-              }} />
+              {loading ?
+                <div style={{
+                  width: '100%',
+
+                }}>
+                  <Skeleton style={{
+                    height: '7.4vh', 
+                  }} />
+                </div>
+                :
+                <img src={news.image ?
+                  "http://139.59.60.50/uploads/news/" + news.image
+                  :
+                  "/images/NoImageFound.png"} style={{
+                    width: '100%',
+                    height: '7.4vh',
+                  }} />
+              }
             </Link>
             <div style={{
               display: 'flex',
@@ -93,12 +124,12 @@ const LatestNews = () => {
                   textDecoration: 'none',
                 }}
                 >
-                  <b>{news.title}</b>
+                  <b>{news.title || <Skeleton count={2}/>}</b>
                 </p>
               </Link>
               <p style={{
                 fontSize: '10px',
-              }}>Published Date: {news.created_at.slice(0, 10)}</p>
+              }}>Published Date: {news.created_at.slice(0, 10) || <Skeleton />}</p>
             </div>
           </div>
         ))}

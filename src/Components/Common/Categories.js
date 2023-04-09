@@ -1,14 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import './Categories.css'
+import axios from '../Axios/axios';
+import LoaderImageTitleDateView from '../Loader/LoaderImageTitleDateView';
 
-const Categories = ({ articles, category, linkCategory }) => {
+const Categories = ({ category, linkCategory }) => {
 
-    // const linkCategory = category.toLowerCase()
-    // if (linkCategory==="circulars"){
-    //     const linkCategory="notices"
-    // }
-    console.log(typeof(linkCategory))
+    const [articles, setArticles] = useState([]);
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        const loadPosts = async () => {
+            const response = await axios.get(
+                `/api/${linkCategory}/`
+            );
+            console.log(response.data.success);
+            setArticles(response.data.success);
+            setLoading(false)
+
+        };
+
+        loadPosts();
+    }, []);
+
+    console.log(typeof (linkCategory))
     const [currentPage, setCurrentPage] = useState(1);
 
     const pageSize = 12;
@@ -80,17 +95,23 @@ const Categories = ({ articles, category, linkCategory }) => {
                 <div className='ArticlesContent'>
                     {visibleArticles.map((article, index) => (
                         <div key={index} className="ArticlesContentEach">
-                            <Link to={"/"+linkCategory+"/"+article.id} style={{textDecoration: 'none'}}>
-                                <img src={article.image? 
-                                "http://139.59.60.50/uploads/"+linkCategory+"/"+article.image
-                            :
-                            "/images/NoImageFound.png"
-                            } />
-                                <p ><b >{article.title}</b></p>
-                                <p>Published Date: {article.created_at.slice(0,10)}</p>
-                            </Link>
-                            <div className='ArticlesContentEachViews'></div>
-                            <p style={{ color: 'rgba(0, 0, 0, .75)' }}>{article.count} views</p>
+                            {loading ?
+                                <LoaderImageTitleDateView />
+                                :
+                                <>
+                                    <Link to={"/" + linkCategory + "/" + article.id} style={{ textDecoration: 'none' }}>
+                                        <img src={article.image ?
+                                            "http://139.59.60.50/uploads/" + linkCategory + "/" + article.image
+                                            :
+                                            "/images/NoImageFound.png"
+                                        } />
+                                        <p ><b >{article.title}</b></p>
+                                        <p>Published Date: {article.created_at.slice(0, 10)}</p>
+                                    </Link>
+                                    <div className='ArticlesContentEachViews'></div>
+                                    <p style={{ color: 'rgba(0, 0, 0, .75)' }}>{article.count} views</p>
+                                </>
+                            }
                         </div>
                     ))
                     }

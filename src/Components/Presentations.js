@@ -4,6 +4,7 @@ import axios from './Axios/axios';
 import HomePageBodyHeader from './Common/HomePageBodyHeader';
 import { BsDownload } from 'react-icons/bs'
 import { Helmet } from 'react-helmet';
+import Skeleton from 'react-loading-skeleton';
 
 const Presentations = () => {
   const [presentations, setPresentations] = useState([]);
@@ -128,7 +129,7 @@ const Presentations = () => {
                 border: '1px solid rgba(110, 110, 110, 0.580164)',
                 fontSize: '12px',
                 fontWeight: 'bold',
-              }}>{presentation.title}</div>
+              }}>{presentation.title || <Skeleton />}</div>
               <div style={{
                 width: '20%',
                 display: 'flex',

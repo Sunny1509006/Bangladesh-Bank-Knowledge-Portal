@@ -5,22 +5,6 @@ import axios from './Axios/axios'
 import { Helmet } from 'react-helmet'
 
 const CircularContent = () => {
-  const params = useParams()
-  const [article, setArticle] = useState([])
-
-  useEffect(() => {
-    axios.get(
-        `/api/notices/${params.id}/`
-    )
-        .then(res => {
-            console.log(res)
-            setArticle(res.data.success)
-        })
-        .catch(err => {
-            console.log(err)
-        })
-
-}, [params.id])
 
   return (
     <>
@@ -29,7 +13,7 @@ const CircularContent = () => {
         Circular Details
       </title>
     </Helmet>
-    <CategoryContentView article={article} category={"notices"}/>
+    <CategoryContentView category={"notices"}/>
     </>
   )
 }
