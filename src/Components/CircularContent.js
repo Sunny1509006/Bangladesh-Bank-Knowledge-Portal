@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import CategoryContentView from './Common/CategoryContentView'
 import axios from './Axios/axios'
+import { Helmet } from 'react-helmet'
 
 const CircularContent = () => {
   const params = useParams()
@@ -22,7 +23,14 @@ const CircularContent = () => {
 }, [params.id])
 
   return (
+    <>
+    <Helmet>
+      <title>
+        Circular Details
+      </title>
+    </Helmet>
     <CategoryContentView article={article} category={"notices"}/>
+    </>
   )
 }
 

@@ -8,6 +8,7 @@ import TextareaAutosize from '@mui/base/TextareaAutosize';
 import { Button } from 'react-bootstrap';
 import axios from './Axios/axios'
 import { formControlClasses } from '@mui/material'
+import { Helmet } from 'react-helmet'
 
 const Contact = () => {
     const [name, setName] = useState('');
@@ -65,6 +66,11 @@ const Contact = () => {
     }
     return (
         <div className='ContactMain'>
+            <Helmet>
+                <title>
+                    Contact us
+                </title>
+            </Helmet>
             <div className='ContactInnerDiv'>
                 <h4>Contact with us</h4>
                 <div className='ContactTop'>

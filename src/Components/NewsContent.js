@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import CategoryContentView from './Common/CategoryContentView'
 import axios from './Axios/axios'
+import { Helmet } from 'react-helmet'
 
 const NewsContent = () => {
     const params = useParams()
@@ -22,7 +23,14 @@ const NewsContent = () => {
   }, [params.id])
   
     return (
+      <>
+      <Helmet>
+        <title>
+          News Details
+        </title>
+      </Helmet>
       <CategoryContentView article={article} category={"news"} />
+      </>
     )
   }
 

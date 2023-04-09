@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const AboutUNOPS = () => {
     return (
@@ -10,6 +11,11 @@ const AboutUNOPS = () => {
             flex: '1',
             paddingTop: '25vh',
         }}>
+            <Helmet>
+                <title>
+                    UNOPS
+                </title>
+            </Helmet>
             <div style={{
                 display: 'flex',
                 flexDirection: 'column',

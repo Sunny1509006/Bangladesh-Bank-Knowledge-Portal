@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom';
 import useAuth from '../hooks/authHooks';
 import HighlightedText from "./HighlightedText"
@@ -23,6 +24,11 @@ const ShowSearchContent = () => {
                 flexDirection: 'column',
                 flex: '1',
             }}>
+                <Helmet>
+                    <title>
+                        Search content Details
+                    </title>
+                </Helmet>
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',

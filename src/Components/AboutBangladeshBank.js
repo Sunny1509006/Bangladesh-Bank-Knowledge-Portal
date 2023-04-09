@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const AboutBangladeshBank = () => {
   return (
@@ -10,6 +11,11 @@ const AboutBangladeshBank = () => {
         flex: '1',
         paddingTop: '25vh',
     }}>
+        <Helmet>
+            <title>
+                bangladesh bank
+            </title>
+        </Helmet>
         <div style={{
             display: 'flex',
             flexDirection: 'column',

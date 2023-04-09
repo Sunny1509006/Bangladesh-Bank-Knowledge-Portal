@@ -77,6 +77,10 @@ const Footer = () => {
           <p>Planning & Implementation</p>
           <img src='/images/BangladeshBank_logo.png' />
         </div>
+        {/* !Developer
+        Name: MD Arif Istiake Sunny
+        Gmail: sunny1509006@gmail.com
+        Mobile: 01732009493 */}
         <div className='footer_middle_each'>
           <p>System Development</p>
           <img src='/images/dream71_logo.png' style={{ width: '75px', height: '40px' }} />

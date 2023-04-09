@@ -3,6 +3,7 @@ import Categories from './Common/Categories';
 import axios from './Axios/axios';
 import HomePageBodyHeader from './Common/HomePageBodyHeader';
 import { BsDownload } from 'react-icons/bs'
+import { Helmet } from 'react-helmet';
 
 const Presentations = () => {
   const [presentations, setPresentations] = useState([]);
@@ -45,6 +46,11 @@ const Presentations = () => {
       flexDirection: 'column',
       flex: '1',
     }}>
+      <Helmet>
+        <title>
+          Presentations
+        </title>
+      </Helmet>
       <HomePageBodyHeader title={"Presentations"} />
       {presentations.length > 0 ? (
         <div style={{

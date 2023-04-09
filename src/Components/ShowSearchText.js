@@ -23,7 +23,7 @@ const ShowSearchText = () => {
     return (
         <div className='search_text_main'>
             <Helmet>
-                <title>Search Result</title>
+                <title>Search Results</title>
             </Helmet>
             <div className='search_content'>
                 <div className='search_inner_content'>

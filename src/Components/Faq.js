@@ -3,6 +3,7 @@ import HomePageBodyHeader from './Common/HomePageBodyHeader'
 import "./Faq.css"
 import axios from "./Axios/axios"
 import FaqsSingle from './Common/FaqsSingle'
+import { Helmet } from 'react-helmet'
 
 
 const Faq = () => {
@@ -26,7 +27,11 @@ const Faq = () => {
     const oddFaqs = useMemo(() => faqs.filter((article, index) => (index % 2 === 1)), [faqs]);
     return (
         <div className='FaqMain'>
-
+            <Helmet>
+                <title>
+                    FAQs
+                </title>
+            </Helmet>
             <HomePageBodyHeader title={"FAQs"} />
             <div className='FaqInnerDiv'>
                 <div className='FaqLeft'>
