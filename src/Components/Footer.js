@@ -33,13 +33,13 @@ const Footer = () => {
     <div className='FooterMain'>
       <div className='footer_top'>
         <div className='Knowledge_portal'>
-          <h3>Knowledge Hub Web Portal</h3>
+          <h4>Knowledge Hub Web Portal</h4>
           <p>Lorem ipsum, or lipsum as it is sometimes known,
             is dummy text used in laying out print, graphic or web designs.
             The passage is attributed to an unknown ...</p>
         </div>
         <div className='categories'>
-          <h3>Categories</h3>
+          <h4>Categories</h4>
           <p>Research</p>
           <p>Presentations</p>
           <p>Circulars</p>
@@ -48,7 +48,7 @@ const Footer = () => {
           <p>FAQ</p>
         </div>
         <div className='important_link'>
-          <h3>Important Link</h3>
+          <h4>Important Link</h4>
           <p>Bangladesh Bank</p>
           <p>GCF</p>
           <p>UNOPS</p>
@@ -57,9 +57,9 @@ const Footer = () => {
           <p>Vision</p>
         </div>
         <div className='sharing_div'>
-          <img src='/images/facebook.png' className='facebook_logo' />
+          {/* <img src='/images/facebook.png' className='facebook_logo' />
           <img src='/images/twitter.png' className='twitter_logo' />
-          <img src='/images/linkedin.png' className='linkedin_logo' />
+          <img src='/images/linkedin.png' className='linkedin_logo' /> */}
           <form onSubmit={handleApi}>
             <input className="newsletterInput" type="text" placeholder="Newsletter"
               value={email}
@@ -71,7 +71,7 @@ const Footer = () => {
       <div className='footer_middle'>
         <div className='footer_middle_each'>
           <p>Funded By</p>
-          <img src='/images/Green_Climate_Fund.png' style={{ width: '85px', height: '60px' }} />
+          <img src='/images/Green_Climate_Fund.png' style={{ width: '85px', height: '60px', marginTop: '-5px' }} />
         </div>
         <div className='footer_middle_each'>
           <p>Planning & Implementation</p>
@@ -83,7 +83,7 @@ const Footer = () => {
         Mobile: 01732009493 */}
         <div className='footer_middle_each'>
           <p>System Development</p>
-          <img src='/images/dream71_logo.png' style={{ width: '75px', height: '40px' }} />
+          <img src='/images/dream71_logo.png' style={{ width: '80px', height: '35px', marginTop: '5px' }} />
         </div>
       </div>
       <div className='footer_below'>
