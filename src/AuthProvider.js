@@ -22,7 +22,7 @@ const AuthProvider = (props) => {
     localStorage.setItem("query", query);
 
     // axios.get(`/api/search/?search=${query}`)
-    axios.get("/api/search/", {
+    axios.post("/api/search/", {
       q: query
     }
     )

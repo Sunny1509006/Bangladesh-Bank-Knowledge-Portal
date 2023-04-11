@@ -13,7 +13,7 @@ const CircularContent = () => {
         Circular Details
       </title>
     </Helmet>
-    <CategoryContentView category={"notices"}/>
+    <CategoryContentView category={"notices"} categoryName={"Circular"}/>
     </>
   )
 }

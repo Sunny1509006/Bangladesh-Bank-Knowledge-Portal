@@ -13,7 +13,7 @@ const ArticleContent = () => {
         Article Details
       </title>
     </Helmet>
-    <CategoryContentView category={"articles"} />
+    <CategoryContentView category={"articles"} categoryName={"Article"} />
     </>
   )
 }

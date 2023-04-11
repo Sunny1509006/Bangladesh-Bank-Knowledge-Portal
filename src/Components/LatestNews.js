@@ -83,56 +83,77 @@ const LatestNews = () => {
         border: '1px solid #D9D9D9',
         paddingTop: '10px'
       }}>
-        {othersNews.map((news, index) => (
-          <div key={index} style={{
-            display: 'flex',
-            padding: '0px 10px',
-            paddingBottom: '10px',
-          }}>
-            <Link to={"/news/" + news.id} style={{
-              width: '25%',
-            }}>
-              {loading ?
-                <div style={{
-                  width: '100%',
-
-                }}>
-                  <Skeleton style={{
-                    height: '7.4vh', 
-                  }} />
-                </div>
-                :
-                <img src={news.image ?
-                  "http://139.59.60.50/uploads/news/" + news.image
-                  :
-                  "/images/NoImageFound.png"} style={{
-                    width: '100%',
-                    height: '7.4vh',
-                  }} />
-              }
-            </Link>
-            <div style={{
+        {loading ?
+          <>  {[1, 2, 3, 4].map((item) =>
+          (
+            <div key={item} style={{
               display: 'flex',
-              flexDirection: 'column',
               padding: '0px 10px',
-              width: '75%',
+              paddingBottom: '10px',
             }}>
-              <Link to={"/news/" + news.id} style={{ textDecoration: 'none' }}>
-                <p style={{
-                  fontSize: '10px',
-                  color: 'var(--primary-color)',
-                  textDecoration: 'none',
-                }}
-                >
-                  <b>{news.title || <Skeleton count={2}/>}</b>
-                </p>
-              </Link>
-              <p style={{
-                fontSize: '10px',
-              }}>Published Date: {news.created_at.slice(0, 10) || <Skeleton />}</p>
+              <div style={{
+                width: '25%',
+
+              }}>
+                <Skeleton style={{
+                  height: '7.4vh',
+                }} />
+              </div>
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                padding: '0px 10px',
+                width: '75%',
+              }}>
+                <Skeleton style={{ paddingBottom: '12px'}}/>
+                <Skeleton />
+              </div>
+
             </div>
-          </div>
-        ))}
+          ))}</>
+          :
+          <>
+            {othersNews.map((news, index) => (
+              <div key={index} style={{
+                display: 'flex',
+                padding: '0px 10px',
+                paddingBottom: '10px',
+              }}>
+                <Link to={"/news/" + news.id} style={{
+                  width: '25%',
+                }}>
+                  <img src={news.image ?
+                    "http://139.59.60.50/uploads/news/" + news.image
+                    :
+                    "/images/NoImageFound.png"} style={{
+                      width: '100%',
+                      height: '7.4vh',
+                    }} />
+                </Link>
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  padding: '0px 10px',
+                  width: '75%',
+                }}>
+                  <Link to={"/news/" + news.id} style={{ textDecoration: 'none' }}>
+                    <p style={{
+                      fontSize: '10px',
+                      color: 'var(--primary-color)',
+                      textDecoration: 'none',
+                    }}
+                    >
+                      <b>{news.title}</b>
+                    </p>
+                  </Link>
+                  <p style={{
+                    fontSize: '10px',
+                  }}>Published Date: {news.created_at.slice(0, 10)}</p>
+                </div>
+              </div>
+            ))}
+          </>
+        }
       </div>
     </div>
   )

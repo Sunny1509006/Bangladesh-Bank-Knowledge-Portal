@@ -13,7 +13,7 @@ const ResearchContent = () => {
         Research Details
       </title>
     </Helmet>
-    <CategoryContentView category={"research"} />
+    <CategoryContentView category={"research"} categoryName={"Research"}/>
     </>
   )
 }

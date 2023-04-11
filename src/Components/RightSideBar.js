@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react'
 import "./RightSideBar.css"
 import axios from './Axios/axios';
 import { Link } from 'react-router-dom';
+import Skeleton from 'react-loading-skeleton';
 
 const RightSideBar = () => {
     const [circulars, setCirculars] = useState([]);
-    // console.log(articles);
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         const loadPosts = async () => {
             const response = await axios.get(
@@ -13,6 +14,7 @@ const RightSideBar = () => {
             );
             console.log(response.data.lastFive);
             setCirculars(response.data.lastFive);
+            setLoading(false)
 
         };
 
@@ -23,7 +25,27 @@ const RightSideBar = () => {
         <div className='RightSideBarMain'>
             <div className='LatestNotices'>
                 <h5>Latest Notices/Circulars</h5>
-
+                {loading?
+                <>
+                  {[1, 2, 3, 4, 5].map((item) =>
+                        (
+                            <div key={item} className='latestNoticesList'>
+                                <div style={{
+                                    width: '50px',
+                                    marginBottom: '5px'
+                                }}>
+                                    <Skeleton style={{
+                                        height: '40px'
+                                    }}/>
+                                </div>
+                                <div className='latestNoticesListTitle'>
+                                    <Skeleton count={2}/>
+                                </div>
+                            </div>
+                        ))}
+                </>
+                :
+                <>
                 {circulars.map((circular, index) => (
                     <div className='latestNoticesList' key={index}>
                         <Link to={"/circulars/" + circular.id}>
@@ -39,6 +61,8 @@ const RightSideBar = () => {
                         </div>
                     </div>
                 ))}
+                </>
+                }
 
             </div>
             <div className='ImportantLink'>

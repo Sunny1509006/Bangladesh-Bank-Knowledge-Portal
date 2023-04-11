@@ -1,9 +1,15 @@
 .RightSideBarMain {
-    flex-basis: 15%;
+    /* flex-basis: 15%; */
     display: flex;
     flex-direction: column;
     padding-top: 25vh;
     background: #DEF4FF;
+    width: 15%;
+    /* later */
+    margin-left: 85%; 
+    position: fixed;
+    height: 75vh;
+
 }
 
 .LatestNotices {

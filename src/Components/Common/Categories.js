@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Categories.css'
 import axios from '../Axios/axios';
 import LoaderImageTitleDateView from '../Loader/LoaderImageTitleDateView';
+import HomePageBodyHeader from './HomePageBodyHeader';
 
 const Categories = ({ category, linkCategory }) => {
 
@@ -88,34 +89,43 @@ const Categories = ({ category, linkCategory }) => {
 
     return (
         <div className='ArticlesMain'>
+            <div className='ArticlesInnerHeading'>
+                {/* <h3>{category}</h3> */}
+                <HomePageBodyHeader title={category} />
+            </div>
             <div className='ArticlesInnerDiv'>
-                <div className='ArticlesInnerHeading'>
+                {/* <div className='ArticlesInnerHeading'>
                     <h3>{category}</h3>
-                </div>
-                <div className='ArticlesContent'>
-                    {visibleArticles.map((article, index) => (
-                        <div key={index} className="ArticlesContentEach">
-                            {loading ?
+                </div> */}
+                {loading ?
+                    <div className='ArticlesContent'>
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) =>
+                        (
+                            <div key={item} className="ArticlesContentEach">
                                 <LoaderImageTitleDateView />
-                                :
-                                <>
-                                    <Link to={"/" + linkCategory + "/" + article.id} style={{ textDecoration: 'none' }}>
-                                        <img src={article.image ?
-                                            "http://139.59.60.50/uploads/" + linkCategory + "/" + article.image
-                                            :
-                                            "/images/NoImageFound.png"
-                                        } />
-                                        <p ><b >{article.title}</b></p>
-                                        <p>Published Date: {article.created_at.slice(0, 10)}</p>
-                                    </Link>
-                                    <div className='ArticlesContentEachViews'></div>
-                                    <p style={{ color: 'rgba(0, 0, 0, .75)' }}>{article.count} views</p>
-                                </>
-                            }
-                        </div>
-                    ))
-                    }
-                </div>
+                            </div>
+                        ))}
+                    </div>
+                    :
+                    <div className='ArticlesContent'>
+                        {visibleArticles.map((article, index) => (
+                            <div key={index} className="ArticlesContentEach">
+                                        <Link to={"/" + linkCategory + "/" + article.id} style={{ textDecoration: 'none' }}>
+                                            <img src={article.image ?
+                                                "http://139.59.60.50/uploads/" + linkCategory + "/" + article.image
+                                                :
+                                                "/images/NoImageFound.png"
+                                            } />
+                                            <p ><b >{article.title}</b></p>
+                                            <p>Published Date: {article.created_at.slice(0, 10)}</p>
+                                        </Link>
+                                        <div className='ArticlesContentEachViews'></div>
+                                        <p style={{ color: 'rgba(0, 0, 0, .75)' }}>{article.count} views</p>
+                            </div>
+                        ))
+                        }
+                    </div>
+                }
                 <div className="blog-pagination__controls">
                     <button
                         className="blog-pagination__control"

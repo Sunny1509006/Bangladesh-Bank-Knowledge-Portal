@@ -26,27 +26,33 @@ const HomePageCategory = ({ category }) => {
 
     const FilterArticles = useMemo(() => articles.filter((article, index) => (index >= 0 & index <= 2)), [articles]);
     return (
-        <div style={{
-            display: 'flex',
-            width: 'calc(100% - 20px)',
-            flexWrap: 'wrap',
-            margin: '0px 12px',
+        <>
+            {loading ?
+                <div style={{
+                    display: 'flex',
+                    width: 'calc(100% - 20px)',
+                    flexWrap: 'wrap',
+                    margin: '0px 12px',
 
-        }}>
-            {/* <div className='ArticlesContent'> */}
-            {FilterArticles.map((article, index) => (
-                <div key={index} className="ArticlesContentEach">
-                    {loading ?
-                        // <div style={{
-                        //     width: '100%'
-                        // }}>
-                        //     <Skeleton style={{
-                        //         height: '20vh'
-                        //     }}/>
-                        // </div> 
-                        <LoaderImageTitleDateView />
-                        :
-                        <>
+                }}>
+                    {[1, 2, 3].map((item) =>
+                    (
+                        <div key={item} className="ArticlesContentEach">
+                            <LoaderImageTitleDateView />
+                        </div>
+                    ))}
+                </div>
+                :
+
+                <div style={{
+                    display: 'flex',
+                    width: 'calc(100% - 20px)',
+                    flexWrap: 'wrap',
+                    margin: '0px 12px',
+
+                }}>
+                    {FilterArticles.map((article, index) => (
+                        <div key={index} className="ArticlesContentEach">
                             <Link to={"/" + category + "/" + article.id} style={{ textDecoration: 'none' }}>
 
                                 <img src={article.image ?
@@ -61,16 +67,13 @@ const HomePageCategory = ({ category }) => {
                             <div className='ArticlesContentEachViews'></div>
                             <p style={{ color: 'rgba(0, 0, 0, .75)' }}>{article.count} views</p>
 
+                        </div>
 
-                        </>
+                    ))
                     }
-
                 </div>
-
-            ))
             }
-            {/* </div> */}
-        </div>
+        </>
     )
 }
 
