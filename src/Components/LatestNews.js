@@ -24,7 +24,7 @@ const LatestNews = () => {
   const oneID = singleNews.map((data) => data.id)
   const oneTitle = singleNews.map((data) => data.title)
   const oneDate = singleNews.map((data) => data.created_at?.slice(0, 10))
-  const backImagePath = `http://139.59.60.50/uploads/news/${oneNews}`
+  const backImagePath = `http://127.0.0.1:8000/uploads/news/${oneNews}`
 
   console.log(oneNews)
   return (
@@ -123,7 +123,7 @@ const LatestNews = () => {
                   width: '25%',
                 }}>
                   <img src={news.image ?
-                    "http://139.59.60.50/uploads/news/" + news.image
+                    "http://127.0.0.1:8000/uploads/news/" + news.image
                     :
                     "/images/NoImageFound.png"} style={{
                       width: '100%',

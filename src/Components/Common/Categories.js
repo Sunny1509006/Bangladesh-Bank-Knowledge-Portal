@@ -112,7 +112,7 @@ const Categories = ({ category, linkCategory }) => {
                             <div key={index} className="ArticlesContentEach">
                                         <Link to={"/" + linkCategory + "/" + article.id} style={{ textDecoration: 'none' }}>
                                             <img src={article.image ?
-                                                "http://139.59.60.50/uploads/" + linkCategory + "/" + article.image
+                                                "http://127.0.0.1:8000/uploads/" + linkCategory + "/" + article.image
                                                 :
                                                 "/images/NoImageFound.png"
                                             } />
