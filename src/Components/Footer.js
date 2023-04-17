@@ -83,7 +83,7 @@ const Footer = () => {
         Mobile: 01732009493 */}
         <div className='footer_middle_each'>
           <p>System Development</p>
-          <img src='/images/dream71_logo.png' style={{ width: '80px', height: '35px', marginTop: '5px' }} />
+          <img src='/images/Dream71_logo.png' style={{ width: '80px', height: '35px', marginTop: '5px' }} />
         </div>
       </div>
       <div className='footer_below'>
