@@ -21,11 +21,11 @@ const AuthProvider = (props) => {
     e.preventDefault();
     localStorage.setItem("query", query);
 
-    // axios.get(`/api/search/?search=${query}`)
-    axios.post("/api/search/", {
-      q: query
-    }
-    )
+    axios.get(`/api/search/?search=${query}`)
+    // axios.post("/api/search/", {
+    //   q: query
+    // }
+    // )
       .then(response => {
         // console.log(response.data);
         setSearchData(response.data.success);

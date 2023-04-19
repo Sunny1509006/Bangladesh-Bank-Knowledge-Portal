@@ -56,17 +56,17 @@ const Footer = () => {
           <p>Mission</p>
           <p>Vision</p>
         </div>
-        <div className='sharing_div'>
-          {/* <img src='/images/facebook.png' className='facebook_logo' />
+        {/* <div className='sharing_div'>
+          <img src='/images/facebook.png' className='facebook_logo' />
           <img src='/images/twitter.png' className='twitter_logo' />
-          <img src='/images/linkedin.png' className='linkedin_logo' /> */}
+          <img src='/images/linkedin.png' className='linkedin_logo' />
           <form onSubmit={handleApi}>
             <input className="newsletterInput" type="text" placeholder="Newsletter"
               value={email}
               onChange={handleEmail}
             />
           </form>
-        </div>
+        </div> */}
       </div>
       <div className='footer_middle'>
         <div className='footer_middle_each'>

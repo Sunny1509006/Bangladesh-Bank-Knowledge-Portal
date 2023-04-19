@@ -12,7 +12,7 @@ const SearchText = () => {
             onSubmit={handleSearch} 
             style={{ display: 'flex',  width: '100%' }}>
                 <input style={{
-                    padding: '5px 20px',
+                    padding: '8px 20px',
                     fontFamily: 'Kalpurush',
                 }}
                     type='text'
@@ -26,16 +26,18 @@ const SearchText = () => {
                 <Button type="button"
                     onClick={handleSearch}
                     style={{
-                        marginTop: '1px',
+                        marginTop: '3px',
                         // marginLeft: '20%',
                         position: 'absolute',
                         border: 'none',
-                        backgroundColor: 'white',
+                        backgroundColor: 'none',
                         paddingTop: '5px',
                         right: '50px'
 
                     }}>
-                    <BsSearch fontSize={18} style={{ color: 'blue' }} />
+                    <BsSearch style={{ color: 'blue',
+                    //  marginBottom: '-2px' 
+                     }} />
 
                 </Button>
             </form>

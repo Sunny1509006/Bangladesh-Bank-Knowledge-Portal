@@ -1,5 +1,7 @@
 .FooterMain {
-    width: 85%;
+    /* later */
+    /* width: 85%; */
+    width: 100%;
     display: flex;
     flex-direction: column;
 
@@ -7,11 +9,11 @@
 
 
 .footer_top {
-    width: calc(100% - 40px);
+    width: calc(100% - 80px);
     display: flex;
     justify-content: space-between;
 
-    padding: 5px 20px;
+    padding: 5px 40px;
     background: var(--primary-color);
     box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
 
@@ -28,7 +30,7 @@
 }
 
 .Knowledge_portal {
-    width: 30%;
+    /* width: 30%; */
 }
 
 .sharing_div {

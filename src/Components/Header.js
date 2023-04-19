@@ -13,7 +13,7 @@ const LINKS = [
     { route: '/circulars', name: 'Circulars' },
     { route: '/news', name: 'News' },
     { route: '/faq', name: 'FAQ' },
-    { route: '/contact', name: 'Contact us' },
+    // { route: '/contact', name: 'Contact us' },
 
 ]
 
