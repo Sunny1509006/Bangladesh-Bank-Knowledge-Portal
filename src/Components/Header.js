@@ -55,6 +55,7 @@ function LinkItem({ link }) {
                             flexDirection: 'column',
                             justifyContent: 'center',
                             alignItems: 'left',
+                            fontSize: '12px',
                         }}
                         // onMouseEnter={handleDropdownOpen} onMouseLeave={handleDropdownClose}
                         >

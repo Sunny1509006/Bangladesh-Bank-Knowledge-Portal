@@ -18,7 +18,7 @@
     padding: 10px;
 }
 
-.LatestNotices h5 {
+.LatestNotices h4 {
     color: var(--primary-color);
     padding-bottom: 15px;
 }
@@ -52,7 +52,7 @@
     padding: 10px;
 }
 
-.ImportantLink h5 {
+.ImportantLink h4 {
     color: var(--primary-color);
     padding-bottom: 5px;
 }

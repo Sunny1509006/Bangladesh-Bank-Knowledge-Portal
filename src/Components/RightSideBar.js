@@ -24,7 +24,7 @@ const RightSideBar = () => {
     return (
         <div className='RightSideBarMain'>
             <div className='LatestNotices'>
-                <h5>Latest Notices/Circulars</h5>
+                <h4>Latest Notices</h4>
                 {loading?
                 <>
                   {[1, 2, 3, 4, 5].map((item) =>
@@ -66,7 +66,7 @@ const RightSideBar = () => {
 
             </div>
             <div className='ImportantLink'>
-                <h5>Important Link</h5>
+                <h4>Important Link</h4>
                 <p>Bangladesh Bank</p>
                 <p>GCF</p>
                 <p>UNOPS</p>
