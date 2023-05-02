@@ -118,7 +118,8 @@ const CategoryContentView = ({ category, categoryName }) => {
                         <div className='CategoryContentImage'>
                             {article.image ?
                                 <>
-                                    <img src={"http://127.0.0.1:8000/uploads/" + category + "/" + article.image} />
+                                    {/* <img src={"http://127.0.0.1:8000/uploads/" + category + "/" + article.image} /> */}
+                                    <img src={"http://139.59.60.50/uploads/" + category + "/" + article.image} />
                                     <div dangerouslySetInnerHTML={{ __html: article.description }} />
                                 </>
                                 :

@@ -123,7 +123,8 @@ const LatestNews = () => {
                   width: '25%',
                 }}>
                   <img src={news.image ?
-                    "http://127.0.0.1:8000/uploads/news/" + news.image
+                    // "http://127.0.0.1:8000/uploads/news/" + news.image
+                    "http://139.59.60.50/uploads/news/" + news.image
                     :
                     "/images/NoImageFound.png"} style={{
                       width: '100%',

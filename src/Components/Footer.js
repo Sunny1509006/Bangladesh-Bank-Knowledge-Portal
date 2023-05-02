@@ -40,10 +40,10 @@ const Footer = () => {
         </div>
         <div className='categories'>
           <h4>Categories</h4>
+          <p>Articles</p>
           <p>Research</p>
           <p>Presentations</p>
           <p>Circulars</p>
-          <p>Blogs</p>
           <p>News</p>
           <p>FAQ</p>
         </div>
@@ -52,9 +52,6 @@ const Footer = () => {
           <p>Bangladesh Bank</p>
           <p>GCF</p>
           <p>UNOPS</p>
-          <p>Projects</p>
-          <p>Mission</p>
-          <p>Vision</p>
         </div>
         {/* <div className='sharing_div'>
           <img src='/images/facebook.png' className='facebook_logo' />

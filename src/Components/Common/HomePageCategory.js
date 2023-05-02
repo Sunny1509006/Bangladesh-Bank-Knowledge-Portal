@@ -56,7 +56,8 @@ const HomePageCategory = ({ category }) => {
                             <Link to={"/" + category + "/" + article.id} style={{ textDecoration: 'none' }}>
 
                                 <img src={article.image ?
-                                    "http://127.0.0.1:8000n/uploads/" + category + "/" + article.image
+                                    // "http://127.0.0.1:8000/uploads/" + category + "/" + article.image
+                                    "http://139.59.60.50/uploads/" + category + "/" + article.image
                                     :
                                     "/images/NoImageFound.png"
                                 } />

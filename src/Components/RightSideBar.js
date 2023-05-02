@@ -49,7 +49,8 @@ const RightSideBar = () => {
                 {circulars.map((circular, index) => (
                     <div className='latestNoticesList' key={index}>
                         <Link to={"/notices/" + circular.id}>
-                            <img src={"http://127.0.0.1:8000/uploads/notices/" + circular.image} />
+                            {/* <img src={"http://127.0.0.1:8000/uploads/notices/" + circular.image} /> */}
+                            <img src={"http://139.59.60.50/uploads/notices/" + circular.image} />
                         </Link>
                         <div className='latestNoticesListTitle'>
                             <Link to={"/notices/" + circular.id} style={{
