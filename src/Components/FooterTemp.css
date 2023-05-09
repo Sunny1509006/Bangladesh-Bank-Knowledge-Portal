@@ -1,0 +1,18 @@
+.FooterTempMain {
+    /* later */
+    /* width: 85%; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer_below {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 60px);
+    background: #EFFFF7;
+    color: black;
+    font-size: 12px;
+    padding: 10px 30px;
+}

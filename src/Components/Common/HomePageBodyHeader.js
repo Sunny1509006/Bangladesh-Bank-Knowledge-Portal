@@ -4,7 +4,7 @@ const HomePageBodyHeader = ({title}) => {
   return (
     <div style={{
         width: 'calc(100% - 72px)',
-        background: '#DEF4FF',
+        background: '#EFFFF7',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

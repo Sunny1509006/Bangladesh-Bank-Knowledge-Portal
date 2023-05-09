@@ -29,11 +29,13 @@ import ShowSearchContent from '../Components/ShowSearchContent';
 import AboutBangladeshBank from '../Components/AboutBangladeshBank';
 import AboutGreenClimateFund from '../Components/AboutGreenClimateFund';
 import AboutUNOPS from '../Components/AboutUNOPS';
+import HeaderTemp from '../Components/HeaderTemp';
+import FooterTemp from '../Components/FooterTemp';
 
 const Home = () => {
     return (
         <>
-            <Header />
+            <HeaderTemp />
             <div className='MainContainer'>
                 <Routes>
                     <Route exact path="/" element={<HomePage />} />
@@ -59,9 +61,10 @@ const Home = () => {
 
 
                 </Routes>
-                <RightSideBar />
+                {/* <RightSideBar /> */}
             </div>
-            <Footer />
+            {/* <Footer /> */}
+            <FooterTemp />
         </>
     )
 }
