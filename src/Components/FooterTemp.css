@@ -16,3 +16,15 @@
     font-size: 12px;
     padding: 10px 30px;
 }
+
+.footer_top {
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 20px;
+    background: white;
+    /* box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25); */
+
+    color: white;
+}

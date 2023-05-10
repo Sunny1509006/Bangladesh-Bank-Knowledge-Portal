@@ -8,7 +8,7 @@
 }
 
 
-.footer_top {
+/* .footer_top {
     width: calc(100% - 80px);
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,7 @@
 
 .footer_top h4 {
     margin: 6px 0px;
-}
+} */
 
 .Knowledge_portal {
     /* width: 30%; */
