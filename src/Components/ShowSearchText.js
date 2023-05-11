@@ -19,6 +19,7 @@ const ShowSearchText = () => {
     //     return newStr;
     // }
     console.log(query)
+    
 
     return (
         <div className='search_text_main'>

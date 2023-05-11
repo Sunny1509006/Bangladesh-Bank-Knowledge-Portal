@@ -31,6 +31,7 @@ import AboutGreenClimateFund from '../Components/AboutGreenClimateFund';
 import AboutUNOPS from '../Components/AboutUNOPS';
 import HeaderTemp from '../Components/HeaderTemp';
 import FooterTemp from '../Components/FooterTemp';
+import { ScrollToTop } from '../Components/ScrollToTop';
 
 const Home = () => {
     return (
