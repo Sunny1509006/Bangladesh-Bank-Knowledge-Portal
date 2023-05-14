@@ -4,6 +4,7 @@ import './Categories.css'
 import axios from '../Axios/axios';
 import LoaderImageTitleDateView from '../Loader/LoaderImageTitleDateView';
 import HomePageBodyHeader from './HomePageBodyHeader';
+import CategoryTab from './CategoryTab';
 
 const Categories = ({ category, linkCategory }) => {
 
@@ -93,6 +94,15 @@ const Categories = ({ category, linkCategory }) => {
                 {/* <h3>{category}</h3> */}
                 <HomePageBodyHeader title={category} />
             </div>
+            <div>
+                {(() => {
+                    if (category === "E-Learning") {
+                        return (
+                            <CategoryTab />
+                        )
+                    }
+                })()}
+            </div>
             <div className='ArticlesInnerDiv'>
                 {/* <div className='ArticlesInnerHeading'>
                     <h3>{category}</h3>
@@ -110,18 +120,20 @@ const Categories = ({ category, linkCategory }) => {
                     <div className='ArticlesContent'>
                         {visibleArticles.map((article, index) => (
                             <div key={index} className="ArticlesContentEach">
-                                        <Link to={"/" + linkCategory + "/" + article.id} style={{ textDecoration: 'none' }}>
-                                            <img src={article.image ?
-                                                // "http://127.0.0.1:8000/uploads/" + linkCategory + "/" + article.image
-                                                "http://139.59.60.50/uploads/" + linkCategory + "/" + article.image
-                                                :
-                                                "/images/NoImageFound.png"
-                                            } />
-                                            <p ><b >{article.title}</b></p>
-                                            <p>Published Date: {article.created_at.slice(0, 10)}</p>
-                                        </Link>
-                                        <div className='ArticlesContentEachViews'></div>
-                                        <p style={{ color: 'rgba(0, 0, 0, .75)' }}>{article.count} views</p>
+                                <Link to={"/" + linkCategory + "/" + article.id} style={{ textDecoration: 'none' }}>
+                                    <div className='ArticlesContentImageDIv'>
+                                        <img src={article.image ?
+                                            // "http://127.0.0.1:8000/uploads/" + linkCategory + "/" + article.image
+                                            "http://139.59.60.50/uploads/" + linkCategory + "/" + article.image
+                                            :
+                                            "/images/NoImageFound.png"
+                                        } />
+                                    </div>
+                                    <p ><b >{article.title}</b></p>
+                                    <p>Published Date: {article.created_at.slice(0, 10)}</p>
+                                </Link>
+                                <div className='ArticlesContentEachViews'></div>
+                                <p style={{ color: 'rgba(0, 0, 0, .75)' }}>{article.count} views</p>
                             </div>
                         ))
                         }

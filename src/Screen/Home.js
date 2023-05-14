@@ -32,6 +32,8 @@ import AboutUNOPS from '../Components/AboutUNOPS';
 import HeaderTemp from '../Components/HeaderTemp';
 import FooterTemp from '../Components/FooterTemp';
 import { ScrollToTop } from '../Components/ScrollToTop';
+import PresentationTemp from '../Components/PresentationTemp';
+import PresentationTempContent from '../Components/PresentationTempContent';
 
 const Home = () => {
     return (
@@ -46,8 +48,8 @@ const Home = () => {
                     <Route exact path="/projects/:id" element={<ProjectContent />} />
                     <Route exact path="/research" element={<Research />} />
                     <Route exact path="/research/:id" element={<ResearchContent />} />
-                    <Route exact path="/presentations" element={<Presentations />} />
-                    <Route exact path="/pptx/:id" element={<PresentationContent />} />
+                    <Route exact path="/eLearning" element={<PresentationTemp />} />
+                    <Route exact path="/pptx/:id" element={<PresentationTempContent />} />
                     <Route exact path="/circulars" element={<Circulars />} />
                     <Route exact path="/notices/:id" element={<CircularContent />} />
                     <Route exact path="/news" element={<News />} />

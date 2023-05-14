@@ -2,18 +2,17 @@ import React from 'react'
 import CategoryContentView from './Common/CategoryContentView'
 import { Helmet } from 'react-helmet'
 
-const ArticleContent = () => {
-
+const PresentationTempContent = () => {
   return (
     <>
     <Helmet>
       <title>
-        Article Details
+        E-Learning Details
       </title>
     </Helmet>
-    <CategoryContentView category={"articles"} categoryName={"Article"} />
+    <CategoryContentView category={"pptx"} categoryName={"E-Learning"} />
     </>
   )
 }
 
-export default ArticleContent
+export default PresentationTempContent

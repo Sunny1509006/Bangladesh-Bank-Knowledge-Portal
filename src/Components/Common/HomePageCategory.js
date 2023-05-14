@@ -54,13 +54,14 @@ const HomePageCategory = ({ category }) => {
                     {FilterArticles.map((article, index) => (
                         <div key={index} className="ArticlesContentEach">
                             <Link to={"/" + category + "/" + article.id} style={{ textDecoration: 'none' }}>
-
+                                <div className='ArticlesContentImageDIv'>
                                 <img src={article.image ?
                                     // "http://127.0.0.1:8000/uploads/" + category + "/" + article.image
                                     "http://139.59.60.50/uploads/" + category + "/" + article.image
                                     :
                                     "/images/NoImageFound.png"
                                 } />
+                                </div>
 
                                 <p ><b >{article.title}</b></p>
                             </Link>

@@ -9,7 +9,7 @@ const LINKS = [
     // { route: '/articles', name: 'Articles' },
     { route: '/projects', name: 'Projects' },
     { route: '/research', name: 'Research' },
-    { route: '/presentations', name: 'e-Learning' },
+    { route: '/eLearning', name: 'e-Learning' },
     // { route: '/circulars', name: 'Circulars' },
     { route: '/articles', name: 'Articles' },
     // { route: '/news', name: 'News' },
