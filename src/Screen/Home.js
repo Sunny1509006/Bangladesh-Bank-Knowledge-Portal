@@ -34,6 +34,7 @@ import FooterTemp from '../Components/FooterTemp';
 import { ScrollToTop } from '../Components/ScrollToTop';
 import PresentationTemp from '../Components/PresentationTemp';
 import PresentationTempContent from '../Components/PresentationTempContent';
+import VideoPlay from '../Components/VideoPlay';
 
 const Home = () => {
     return (
@@ -49,7 +50,7 @@ const Home = () => {
                     <Route exact path="/research" element={<Research />} />
                     <Route exact path="/research/:id" element={<ResearchContent />} />
                     <Route exact path="/eLearning" element={<PresentationTemp />} />
-                    <Route exact path="/pptx/:id" element={<PresentationTempContent />} />
+                    <Route exact path="/pptx/:id" element={<VideoPlay />} />
                     <Route exact path="/circulars" element={<Circulars />} />
                     <Route exact path="/notices/:id" element={<CircularContent />} />
                     <Route exact path="/news" element={<News />} />

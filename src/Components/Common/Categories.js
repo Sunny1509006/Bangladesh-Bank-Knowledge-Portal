@@ -98,85 +98,94 @@ const Categories = ({ category, linkCategory }) => {
                 {(() => {
                     if (category === "E-Learning") {
                         return (
-                            <CategoryTab />
+                            <CategoryTab
+                                articles={articles}
+                                linkCategory={linkCategory}
+                                loading={loading}
+                            />
+                        )
+                    } else {
+                        return (
+                            <div className='ArticlesInnerDiv'>
+                                {/* <div className='ArticlesInnerHeading'>
+                    <h3>{category}</h3>
+                </div> */}
+                                {loading ?
+                                    <div className='ArticlesContent'>
+                                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) =>
+                                        (
+                                            <div key={item} className="ArticlesContentEach">
+                                                <LoaderImageTitleDateView />
+                                            </div>
+                                        ))}
+                                    </div>
+                                    :
+                                    <div className='ArticlesContent'>
+                                        {visibleArticles.map((article, index) => (
+                                            <div key={index} className="ArticlesContentEach">
+                                                <Link to={"/" + linkCategory + "/" + article.id} style={{ textDecoration: 'none' }}>
+                                                    <div className='ArticlesContentImageDIv'>
+                                                        <img src={article.image ?
+                                                            // "http://127.0.0.1:8000/uploads/" + linkCategory + "/" + article.image
+                                                            "http://139.59.60.50/uploads/" + linkCategory + "/" + article.image
+                                                            :
+                                                            "/images/NoImageFound.png"
+                                                        } />
+                                                    </div>
+                                                    <p ><b >{article.title}</b></p>
+                                                    <p>Published Date: {article.created_at.slice(0, 10)}</p>
+                                                </Link>
+                                                <div className='ArticlesContentEachViews'></div>
+                                                <p style={{ color: 'rgba(0, 0, 0, .75)' }}>{article.count} views</p>
+                                            </div>
+                                        ))
+                                        }
+                                    </div>
+                                }
+                                <div className="blog-pagination__controls">
+                                    <button
+                                        className="blog-pagination__control"
+                                        onClick={handlePrevPage}
+                                        disabled={currentPage === 1}
+                                    >
+                                        Prev
+                                    </button>
+                                    {getPageNumbers().map((pageNumber, index) => (
+                                        <button
+                                            key={index}
+                                            className={`blog-pagination__control ${pageNumber === currentPage ? 'active' : ''
+                                                }`}
+                                            onClick={() => handlePageChange(pageNumber)}
+                                            disabled={pageNumber === '...'}
+                                        >
+                                            {pageNumber}
+                                        </button>
+                                    ))}
+                                    <button
+                                        className="blog-pagination__control"
+                                        onClick={handleNextPage}
+                                        disabled={currentPage === pageCount}
+                                    >
+                                        Next
+                                    </button>
+                                    <div className="blog-pagination__goto">
+                                        <span>Go to page: </span>
+                                        <input
+                                            type="number"
+                                            min="1"
+                                            max={pageCount}
+                                            // value={currentPage}
+                                            onChange={handleGoToPage}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
                         )
                     }
                 })()}
             </div>
-            <div className='ArticlesInnerDiv'>
-                {/* <div className='ArticlesInnerHeading'>
-                    <h3>{category}</h3>
-                </div> */}
-                {loading ?
-                    <div className='ArticlesContent'>
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) =>
-                        (
-                            <div key={item} className="ArticlesContentEach">
-                                <LoaderImageTitleDateView />
-                            </div>
-                        ))}
-                    </div>
-                    :
-                    <div className='ArticlesContent'>
-                        {visibleArticles.map((article, index) => (
-                            <div key={index} className="ArticlesContentEach">
-                                <Link to={"/" + linkCategory + "/" + article.id} style={{ textDecoration: 'none' }}>
-                                    <div className='ArticlesContentImageDIv'>
-                                        <img src={article.image ?
-                                            // "http://127.0.0.1:8000/uploads/" + linkCategory + "/" + article.image
-                                            "http://139.59.60.50/uploads/" + linkCategory + "/" + article.image
-                                            :
-                                            "/images/NoImageFound.png"
-                                        } />
-                                    </div>
-                                    <p ><b >{article.title}</b></p>
-                                    <p>Published Date: {article.created_at.slice(0, 10)}</p>
-                                </Link>
-                                <div className='ArticlesContentEachViews'></div>
-                                <p style={{ color: 'rgba(0, 0, 0, .75)' }}>{article.count} views</p>
-                            </div>
-                        ))
-                        }
-                    </div>
-                }
-                <div className="blog-pagination__controls">
-                    <button
-                        className="blog-pagination__control"
-                        onClick={handlePrevPage}
-                        disabled={currentPage === 1}
-                    >
-                        Prev
-                    </button>
-                    {getPageNumbers().map((pageNumber, index) => (
-                        <button
-                            key={index}
-                            className={`blog-pagination__control ${pageNumber === currentPage ? 'active' : ''
-                                }`}
-                            onClick={() => handlePageChange(pageNumber)}
-                            disabled={pageNumber === '...'}
-                        >
-                            {pageNumber}
-                        </button>
-                    ))}
-                    <button
-                        className="blog-pagination__control"
-                        onClick={handleNextPage}
-                        disabled={currentPage === pageCount}
-                    >
-                        Next
-                    </button>
-                    <div className="blog-pagination__goto">
-                        <span>Go to page: </span>
-                        <input
-                            type="number"
-                            min="1"
-                            max={pageCount}
-                            // value={currentPage}
-                            onChange={handleGoToPage}
-                        />
-                    </div>
-                </div>
-            </div>
+
+
         </div>
     )
 }

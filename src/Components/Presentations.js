@@ -6,25 +6,25 @@ import { BsDownload } from 'react-icons/bs'
 import { Helmet } from 'react-helmet';
 import Skeleton from 'react-loading-skeleton';
 
-const Presentations = () => {
-  const [presentations, setPresentations] = useState([]);
-  const [articles, setArticles] = useState([]);
+const Presentations = ({presentations}) => {
+  // const [presentations, setPresentations] = useState([]);
+  // const [articles, setArticles] = useState([]);
   // console.log(articles);
   // const [fileUrl, setFileUrl] = useState('');
-  useEffect(() => {
-    const loadPosts = async () => {
-      const response = await axios.get(
-        "/api/pptx/"
-      );
-      console.log(response.data.success);
-      setPresentations(response.data.success);
-      setArticles(response.data.success)
-      // setFileUrl(response.data.success.pptx);
+  // useEffect(() => {
+  //   const loadPosts = async () => {
+  //     const response = await axios.get(
+  //       "/api/pptx/"
+  //     );
+  //     console.log(response.data.success);
+  //     setPresentations(response.data.success);
+  //     setArticles(response.data.success)
+  //     // setFileUrl(response.data.success.pptx);
 
-    };
+  //   };
 
-    loadPosts();
-  }, []);
+  //   loadPosts();
+  // }, []);
 
 
   const handleDownload = (filePath) => () => {
@@ -41,7 +41,7 @@ const Presentations = () => {
   return (
     // <Categories category={"Presentations"} articles={articles} linkCategory={"pptx"}/>
     <div style={{
-      paddingTop: '25vh',
+      // paddingTop: '25vh',
       display: 'flex',
       minHeight: '400px',
       width: '100%',
@@ -53,7 +53,7 @@ const Presentations = () => {
           Presentations
         </title>
       </Helmet>
-      <HomePageBodyHeader title={"Presentations"} />
+      {/* <HomePageBodyHeader title={"Presentations"} /> */}
       {presentations.length > 0 ? (
         <div style={{
           display: 'flex',
@@ -70,7 +70,7 @@ const Presentations = () => {
             justifyContent: 'center',
             alignItems: 'center',
             width: '100%',
-            background: 'var(--primary-color)',
+            background: '#208F59',
             color: 'white',
           }}>
             <div style={{
