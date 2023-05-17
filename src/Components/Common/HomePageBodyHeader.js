@@ -3,7 +3,7 @@ import React from 'react'
 const HomePageBodyHeader = ({title}) => {
   return (
     <div style={{
-        width: 'calc(100% - 72px)',
+        width: 'calc(100% - 60px)',
         background: '#EFFFF7',
         display: 'flex',
         justifyContent: 'center',

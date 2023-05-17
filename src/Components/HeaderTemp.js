@@ -116,12 +116,12 @@ const HeaderTemp = () => {
                     <div className='header_temp_navbar'>
 
                         <div className='navbar-list' style={{
-                            marginTop: '30px'
+                            marginTop: '20px'
                         }}>
                             {LINKS.map(link => <LinkItem key={link.route} link={link} />)}
                         </div>
                         <div className='search' style={{
-                            marginTop: '15px'
+                            marginTop: '6px'
                         }}>
                             <SearchText />
                         </div>

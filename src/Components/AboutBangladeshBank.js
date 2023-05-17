@@ -21,7 +21,7 @@ const AboutBangladeshBank = () => {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            width: 'calc(100% - 100px)',
+            width: 'calc(100% - 60px)',
             margin: '30px',
             boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.25)',
             padding: '20px',
@@ -52,7 +52,10 @@ const AboutBangladeshBank = () => {
                 }}>BB performs all the core functions of a typical monetary and financial sector regulator, and a number of other non core functions. The major functional areas include :</p>
                 <ul style={{
                     fontSize: '12px',
+                    marginLeft: '40px',
+
                 }}>
+                    <br/>
                     <li>Formulation And Implementation Of Monetary And Credit Policies.</li>
                     <li>Regulation And Supervision Of Banks And Non-Bank Financial Institutions, Promotion And Development Of Domestic Financial Markets.</li>
                     <li>Management Of The Country's International Reserves.</li>

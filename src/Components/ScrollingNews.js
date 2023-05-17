@@ -45,7 +45,16 @@ const ScrollingNews = () => {
                     fontWeight: 'bold',
                 }}>
                     <marquee>
-                        {news[0]?.title}
+                        {/* {news[0]?.title} */}
+                        {news?.map((new_data, index)=> (
+                            <span key={index} style={{
+                                marginRight: '30px',
+                            }}>
+                                {new_data.title}
+                            </span>
+                            
+                        ))}
+                        {/* {news.map(news_data => news_data.toString())} */}
                     </marquee>
                 </p>
             </div>

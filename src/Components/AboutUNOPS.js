@@ -21,7 +21,7 @@ const AboutUNOPS = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                width: 'calc(100% - 100px)',
+                width: 'calc(100% - 60px)',
                 margin: '30px',
                 boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.25)',
                 padding: '20px',

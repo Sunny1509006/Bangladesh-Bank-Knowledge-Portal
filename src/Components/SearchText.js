@@ -12,7 +12,7 @@ const SearchText = () => {
             onSubmit={handleSearch} 
             style={{ display: 'flex',  width: '100%' }}>
                 <input style={{
-                    padding: '8px 20px',
+                    padding: '5px 20px',
                     fontFamily: 'Kalpurush',
                 }}
                     type='text'
@@ -32,7 +32,8 @@ const SearchText = () => {
                         border: 'none',
                         backgroundColor: 'none',
                         paddingTop: '5px',
-                        right: '50px'
+                        right: '50px',
+                        background: 'none'
 
                     }}>
                     <BsSearch style={{ color: 'blue',

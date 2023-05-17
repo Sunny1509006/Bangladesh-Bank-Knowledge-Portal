@@ -21,7 +21,7 @@ const AboutGreenClimateFund = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 alignItems: 'center',
-                width: 'calc(100% - 100px)',
+                width: 'calc(100% - 60px)',
                 margin: '30px',
                 boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.25)',
                 padding: '20px',
@@ -51,14 +51,19 @@ const AboutGreenClimateFund = () => {
                     }}>We achieve our goal by investing across four transitions – built environment; energy & industry; human security, livelihoods and wellbeing; and land-use, forests and ecosystems – and employing a four-pronged approach:</p>
                     <ul style={{
                         fontSize: '12px',
+                        marginLeft: '40px',
+
                     }}>
+                        <br/>
                         <li>Transformational planning and programming: by promoting integrated strategies, planning and policymaking to maximise the co-benefits between mitigation, adaptation and sustainable development.</li>
                         <li>Catalysing climate innovation: by investing in new technologies, business models, and practices to establish a proof of concept.</li>
                         <li>De-risking investment to mobilize finance at scale: by using scarce public resources to improve the risk-reward profile of low emission climate resilient investment and crowd-in private finance, notably for adaptation, nature-based solutions, least developed countries (LDCs) and small island developing states (SIDS).</li>
                         <li>Mainstreaming climate risks and opportunities into investment decision-making to align finance with sustainable development: by promoting methodologies, standards and practices that foster new norms and values.</li>
+                        <br/>
                     </ul>
                     <p style={{
                         fontSize: '12px',
+                        
                     }}>Climate change offers businesses an unprecedented chance to capitalise on new growth and investment opportunities that can protect the planet as well. GCF employs part of its funds to help mobilise financial flows from the private sector to compelling and profitable climate-smart investment opportunities.</p>
                 </div>
             </div>

@@ -29,7 +29,7 @@ const Presentations = ({presentations}) => {
 
   const handleDownload = (filePath) => () => {
     // const baseUrl = 'http://127.0.0.1:8000/uploads/pptx/';
-    const baseUrl = 'http://139.59.60.50/uploads/pptx/';
+    const baseUrl = 'http://139.59.60.50/uploads/pptx/pptx/';
     const downloadLink = document.createElement('a');
     downloadLink.href = `${baseUrl}${filePath}`;
     downloadLink.download = filePath.substring(filePath.lastIndexOf('/') + 1);
