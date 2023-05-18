@@ -36,6 +36,7 @@ const AuthProvider = (props) => {
       })
       .catch(err => {
         console.log(err);
+        setSearchData([])
       })
   }
 
