@@ -34,17 +34,20 @@ const FooterTemp = () => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     gap: '10px',
+                    flexDirection: 'column',
                     // margin: '0px 30px',
                 }}>
-                    <p>Planning & Implementation</p>
-                    <img src="/images/BangladeshBank_logo.png" style={{
+                    <p>Planning & Implementation by</p>
+                    {/* <img src="/images/BangladeshBank_logo.png" style={{
                         height: '60px',
                         width: '60px',
                     }} />
                     <img src="/images/BangladeshBank_logo.png" style={{
                         height: '60px',
                         width: '60px',
-                    }} />
+                    }} /> */}
+                    <p>Sustainable Finance Department of Bangladesh Bank</p>
+
                 </div>
             </div>
             <div className='footer_below'>
