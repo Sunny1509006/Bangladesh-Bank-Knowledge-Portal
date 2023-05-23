@@ -3,7 +3,7 @@
     flex-direction: column;
     position: fixed;
     width: 100%;
-    height: 25vh;
+    height: 18vh;
     z-index: 999;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .logo {
-    width: 20%;
+    width: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,7 +54,7 @@
     height: 10%;
     justify-content: space-between;
     background-color: none;
-    margin-left: 15%;
+    margin-left: 25%;
     border-bottom: 40px solid #EFFFF7;
     /* border-bottom: 40px solid #DEF4FF; */
     border-left: 50px solid transparent;

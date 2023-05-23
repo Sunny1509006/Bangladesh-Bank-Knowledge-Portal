@@ -147,16 +147,16 @@ const VideoPlayer = () => {
 
     return (
         <div style={{
-            marginTop: '25vh',
+            marginTop: '18vh',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             padding: '30px',
             width: '100%',
-            minHeight: '300px',
+            minHeight: '500px',
         }}>
             {videoUrl ? (
-                <video controls width={500} height={300} >
+                <video controls width={900} height={500} >
                     <source src={videoUrl} type="video/mp4" />
                 </video>
             ) : (

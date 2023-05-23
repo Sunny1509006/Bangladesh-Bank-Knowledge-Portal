@@ -9,7 +9,7 @@ const AboutUNOPS = () => {
             width: '100%',
             minHeight: '400px',
             flex: '1',
-            paddingTop: '25vh',
+            paddingTop: '18vh',
         }}>
             <Helmet>
                 <title>
