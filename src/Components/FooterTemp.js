@@ -8,13 +8,16 @@ const FooterTemp = () => {
                 <div style={{
                     backgroundImage: "url(/images/gcf.png)",
                     // width: 'calc(100% - 60px)',
-                    width: '100%',
+                    width: '50%',
                     height: '120px',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover',
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
+                    minWidth: '400px',
+                    flex: '1',
+
                     // margin: '0px 30px',
                 }}>
                     <p>Funded by</p>
@@ -26,7 +29,7 @@ const FooterTemp = () => {
                 <div style={{
                     backgroundImage: "url(/images/bb.png)",
                     // width: 'calc(100% - 60px)',
-                    width: '100%',
+                    width: '50%',
                     height: '120px',
                     backgroundPosition: 'center',
                     backgroundSize: 'cover',
@@ -35,6 +38,8 @@ const FooterTemp = () => {
                     alignItems: 'center',
                     gap: '10px',
                     flexDirection: 'column',
+                    minWidth: '400px',
+                    flex: '1',
                     // margin: '0px 30px',
                 }}>
                     <p>Planning & Implementation by</p>
