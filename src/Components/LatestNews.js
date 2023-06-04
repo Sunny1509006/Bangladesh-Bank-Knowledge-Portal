@@ -50,6 +50,8 @@ const LatestNews = () => {
             width: '66%',
             height: '40vh',
             display: 'flex',
+            flex: '2',
+            minWidth: '500px',
           }}
         >
           <div
@@ -82,7 +84,9 @@ const LatestNews = () => {
         display: 'flex',
         flexDirection: 'column',
         border: '1px solid #D9D9D9',
-        paddingTop: '10px'
+        paddingTop: '10px',
+        minWidth: '300px',
+        flex: '1',
       }}>
         {loading ?
           <>  {[1, 2, 3, 4].map((item) =>
@@ -119,7 +123,9 @@ const LatestNews = () => {
                 display: 'flex',
                 padding: '0px 10px',
                 paddingBottom: '10px',
+                
               }}>
+
                 <Link to={"/news/" + news.id} style={{
                   width: '25%',
                 }}>
