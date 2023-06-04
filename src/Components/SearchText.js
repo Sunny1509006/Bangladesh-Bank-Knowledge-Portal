@@ -25,17 +25,7 @@ const SearchText = () => {
                 />
                 <Button type="button"
                     onClick={handleSearch}
-                    style={{
-                        marginTop: '3px',
-                        // marginLeft: '20%',
-                        position: 'absolute',
-                        border: 'none',
-                        backgroundColor: 'none',
-                        paddingTop: '5px',
-                        right: '50px',
-                        background: 'none'
-
-                    }}>
+                    className='search_button'>
                     <BsSearch style={{ color: 'blue',
                     //  marginBottom: '-2px' 
                      }} />

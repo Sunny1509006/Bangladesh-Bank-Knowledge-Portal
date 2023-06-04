@@ -19,3 +19,24 @@
     color: black;
 }
 
+.search_button {
+    margin-top: 3px;
+    position: absolute;
+    border: none;
+    background-color: none;
+    padding-top: 5px;
+    right: 50px;
+    background: none;
+}
+
+@media (max-width: 1150px) {
+    .search_button {
+        margin-top: -3px;
+        position: relative;
+        border: none;
+        background-color: none;
+        padding-top: 5px;
+        right: 30px;
+        background: none;
+    }
+}
