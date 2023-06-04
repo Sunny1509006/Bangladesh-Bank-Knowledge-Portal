@@ -99,8 +99,12 @@ const Slider = () => {
                         width: '100%',
                         display: 'flex',
                         flexDirection: 'column',
+                        justifyContent: 'center',
+                        alignItems: 'center',
         }}>
-
+          <div style={{marginTop: '150px'}}>
+          {images[currentSlide]?.title}
+          </div>
         </div>
 
       </div>

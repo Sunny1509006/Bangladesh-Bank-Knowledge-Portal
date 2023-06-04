@@ -155,7 +155,7 @@ const HeaderTemp = () => {
                 </div>
                 {!openNavbarMenu && (
                     <div className='Header_menu'>
-                        <GiHamburgerMenu color='blue' onClick={handleOpenNavbarMenu} size={24}/>
+                        <GiHamburgerMenu color='#034E6F' onClick={handleOpenNavbarMenu} size={24}/>
                     </div>
                 )}
 
