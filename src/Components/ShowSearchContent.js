@@ -17,7 +17,7 @@ const ShowSearchContent = () => {
     return (
         < >
             <div key={params.id} style={{
-                paddingTop: '25vh',
+                paddingTop: '120px',
                 display: 'flex',
                 minHeight: '400px',
                 width: '100%',

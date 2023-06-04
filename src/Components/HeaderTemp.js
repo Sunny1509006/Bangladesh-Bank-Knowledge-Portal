@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './HeaderTemp.css'
 import { Link, useMatch } from 'react-router-dom'
 import SearchText from './SearchText';
+import {GiHamburgerMenu} from 'react-icons/gi'
 
 const LINKS = [
     { route: '/', name: 'Home' },
@@ -96,21 +97,11 @@ const HeaderTemp = () => {
             }}>
             <div className='Header_temp_inside'>
                 <div className='logo'>
-                    <img src='/images/BangladeshBank_logo.png' style={{
-                        height: '80%',
-                        width: '50%',
-                    }} />
+                    <img src='/images/BangladeshBank_logo.png' />
                 </div>
                 <div className='right_content'>
                     <div className='upper_content'>
                         <h1>Green Climate Fund Knowledge Hub</h1>
-                        {/* <img src="/images/light.png" style={{
-                            height: '60px',
-                            width: '60px',
-                            // marginLeft: '52%',
-                            // marginTop: '-60px'
-                            marginLeft: '15px'
-                        }}/> */}
                     </div>
  
                     <div className='header_temp_navbar'>

@@ -147,7 +147,7 @@ const VideoPlayer = () => {
 
     return (
         <div style={{
-            marginTop: '18vh',
+            marginTop: '120px',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
