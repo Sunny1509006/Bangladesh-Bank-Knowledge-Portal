@@ -125,11 +125,12 @@ const CategoryTab = ({ articles, linkCategory, loading }) => {
                 ))}
               </div>
               :
-              <div className='ArticlesContent'>
+              <div className='ArticlesContentVideo'>
                 {visibleArticles.map((article, index) => (
-                  <div key={index} className="ArticlesContentEach">
+                  
+                  <div key={index} className="ArticlesContentEachVideo">
                     <Link to={"/" + linkCategory + "/" + article.id} style={{ textDecoration: 'none' }}>
-                      <div className='ArticlesContentImageDIv'>
+                      <div className='ArticlesContentImageDIvVideo'>
                         <img src={article.image ?
                           "http://139.59.60.50/uploads/" + linkCategory + "/" + article.image
                           :
@@ -139,9 +140,10 @@ const CategoryTab = ({ articles, linkCategory, loading }) => {
                       <p ><b >{article.title}</b></p>
                       <p>Published Date: {article.created_at.slice(0, 10)}</p>
                     </Link>
-                    <div className='ArticlesContentEachViews'></div>
+                    <div className='ArticlesContentEachViewsVideo'></div>
                     <p style={{ color: 'rgba(0, 0, 0, .75)' }}>{article.count} views</p>
                   </div>
+          
                 ))
                 }
               </div>
