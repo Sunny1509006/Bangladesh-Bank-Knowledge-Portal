@@ -69,8 +69,26 @@
     padding-bottom: 20px;
 }
 .CategoryContentImage img {
-    width: 30%;
+    width: 40%;
     float: left;
     padding-right: 10px;
     padding-bottom: 10px;
+}
+
+@media (max-width: 900px){
+    .CategoryContentImage img {
+        width: 50%;
+        float: left;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 500px){
+    .CategoryContentImage img {
+        width: 100%;
+        float: left;
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
 }
