@@ -1,0 +1,116 @@
+.VideoPlayMain {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    width: 100%;
+}
+
+.videoFrame {
+    height: 500px;
+    width: 90%;
+}
+
+@media (max-width: 1000px) {
+    .videoFrame {
+        height: 400px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    .videoFrame {
+        height: 350px;
+        width: 90%;
+    }
+
+    .VideoPlayMain {
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    .videoFrame {
+        height: 300px;
+        width: 90%;
+    }
+
+    .VideoPlayMain {
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .videoFrame {
+        height: 250px;
+        width: 90%;
+    }
+
+    .VideoPlayMain {
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .videoFrame {
+        height: 200px;
+        width: 90%;
+    }
+
+    .VideoPlayMain {
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .videoFrame {
+        height: 200px;
+        width: 95%;
+    }
+
+    .VideoPlayMain {
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 420px) {
+    .videoFrame {
+        height: 200px;
+        width: 100%;
+    }
+
+    .VideoPlayMain {
+        margin-top: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+    }
+}
