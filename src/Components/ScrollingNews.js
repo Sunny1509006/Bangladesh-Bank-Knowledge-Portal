@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from './Axios/axios';
+import "./ScrollingNews.css"
 
 const ScrollingNews = () => {
     const [news, setNews] = useState([]);
@@ -22,13 +23,11 @@ const ScrollingNews = () => {
             display: 'flex',
             justifyContent: 'space-between',
         }}>
-            <div style={{
-                width: '20%',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-            }}>
+            <div className='NewsHighlights'>
                 <p><b>News Highlights</b></p>
+            </div>
+            <div className='NewsDiv'>
+                <p><b>News</b></p>
             </div>
             <div style={{
                 width: '80%',

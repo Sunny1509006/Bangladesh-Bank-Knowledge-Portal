@@ -1,0 +1,26 @@
+.NewsHighlights {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    .NewsDiv {
+        display: none;
+    }
+
+
+
+@media (max-width: 800px) {
+    .NewsHighlights {
+        display: none;
+    }
+
+    .NewsDiv {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
