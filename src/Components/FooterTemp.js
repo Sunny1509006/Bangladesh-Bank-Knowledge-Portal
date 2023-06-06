@@ -51,7 +51,7 @@ const FooterTemp = () => {
                         height: '60px',
                         width: '60px',
                     }} /> */}
-                    <p>Sustainable Finance Department of Bangladesh Bank</p>
+                    <p className='sustainable'>Sustainable Finance Department of Bangladesh Bank</p>
 
                 </div>
             </div>

@@ -15,6 +15,8 @@
     color: black;
     font-size: 12px;
     padding: 10px 30px;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
 .footer_top {
@@ -28,4 +30,24 @@
     flex-wrap: wrap;
 
     color: white;
+}
+
+.sustainable {
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .footer_below {
+        display: flex;
+        justify-content: center;
+        width: calc(100%);
+        background: #EFFFF7;
+        color: black;
+        font-size: 12px;
+        padding: 10px 30px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
 }
