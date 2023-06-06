@@ -21,10 +21,12 @@ const FooterTemp = () => {
                     // margin: '0px 30px',
                 }}>
                     <p>Funded by</p>
+                    <a href="https://www.greenclimate.fund/" >
                     <img src="/images/gcf_logo.png" style={{
                         height: '80px',
                         width: '140px',
                     }} />
+                    </a>
                 </div>
                 <div style={{
                     backgroundImage: "url(/images/bb.png)",
@@ -62,12 +64,14 @@ const FooterTemp = () => {
 
                 }}>
                     <p className='copyright_p'><b>System Development</b></p>
+                    <a href="https://dream71.com/" >
                     <img src='/images/Dream71_logo.png' style={{
                         width: '80px',
                         height: '20px',
                         marginLeft: '8px',
                         marginTop: '-5px',
                     }} />
+                    </a>
                 </div>
             </div>
         </div>

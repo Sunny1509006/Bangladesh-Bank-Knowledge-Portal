@@ -35,6 +35,7 @@ import { ScrollToTop } from '../Components/ScrollToTop';
 import PresentationTemp from '../Components/PresentationTemp';
 import PresentationTempContent from '../Components/PresentationTempContent';
 import VideoPlayer from '../Components/VideoPlay';
+import Sitemap from '../Components/Sitemap';
 
 const Home = () => {
     return (
@@ -57,6 +58,7 @@ const Home = () => {
                     <Route exact path="/news/:id" element={<NewsContent />} />
                     <Route exact path="/faq" element={<Faq />} />
                     <Route exact path='/contact' element={<Contact />} />
+                    <Route exact path="/sitemap" element={<Sitemap />} />
                     <Route exact path="/search" element={<ShowSearchText />} />
                     <Route exact path="/search/content/:id" element={<ShowSearchContent />} />
                     <Route exact path="/bangladeshbank" element={<AboutBangladeshBank />} />
