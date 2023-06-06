@@ -50,8 +50,8 @@ const LatestNews = () => {
             width: '66%',
             height: '40vh',
             display: 'flex',
-            flex: '2',
-            minWidth: '500px',
+            flex: '1',
+            minWidth: '300px',
           }}
         >
           <div

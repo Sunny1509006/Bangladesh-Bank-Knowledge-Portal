@@ -15,7 +15,7 @@ const FooterTemp = () => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    minWidth: '400px',
+                    minWidth: '300px',
                     flex: '1',
 
                     // margin: '0px 30px',
@@ -38,7 +38,7 @@ const FooterTemp = () => {
                     alignItems: 'center',
                     gap: '10px',
                     flexDirection: 'column',
-                    minWidth: '400px',
+                    minWidth: '300px',
                     flex: '1',
                     // margin: '0px 30px',
                 }}>
