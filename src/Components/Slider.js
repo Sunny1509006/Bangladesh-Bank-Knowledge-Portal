@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from './Axios/axios';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import { GoPrimitiveDot } from 'react-icons/go'
+import "./Slider.css"
 
 const Slider = () => {
   const [images, setImages] = useState([]);
@@ -81,29 +82,37 @@ const Slider = () => {
       {/* <button onClick={handlePrevSlide}>Prev</button> */}
       {/* <div style={ leftArrowStyles }></div>
         <div style={ rightArrowStyles }></div> */}
-      <AiOutlineLeft style={leftArrowStyles} onClick={handlePrevSlide} />
-      <AiOutlineRight style={rightArrowStyles} onClick={handleNextSlide} />
+      <AiOutlineLeft
+        // style={leftArrowStyles}
+        onClick={handlePrevSlide}
+        className='leftArrowStyles' />
+      <AiOutlineRight
+        // style={rightArrowStyles}
+        onClick={handleNextSlide}
+        className='rightArrowStyles'
+      />
       <div style={{
         backgroundImage: `url(http://139.59.60.50/${images[currentSlide]?.image})`,
         // width: 'calc(100% - 60px)',
         width: '100%',
-        height: '300px',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
         display: 'flex',
         // margin: '0px 30px',
-      }}>
+      }}
+      className='SliderImage'
+      >
         <div style={{
-                        backgroundColor: 'rgba(0,0,0,0.6)',
-                        color: 'white',
-                        width: '100%',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        alignItems: 'center',
+          backgroundColor: 'rgba(0,0,0,0.6)',
+          color: 'white',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}>
-          <div style={{marginTop: '150px'}}>
-          {images[currentSlide]?.title}
+          <div style={{ marginTop: '150px' }}>
+            {images[currentSlide]?.title}
           </div>
         </div>
 
@@ -119,7 +128,7 @@ const Slider = () => {
             fontSize: '20px',
             color: '#656d69'
           }}>
-            <GoPrimitiveDot onClick={()=> goToImage(index)}/>
+            <GoPrimitiveDot onClick={() => goToImage(index)} />
           </div>
         ))}
       </div>
