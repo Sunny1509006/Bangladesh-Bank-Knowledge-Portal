@@ -86,16 +86,20 @@ const RightSideBar = () => {
             </div>
             {!openSidebar && (
                 <div className='RightSidebarResponsive'>
-                    <RxDoubleArrowLeft fontSize={26} onClick={handleSidebar} />
+                    <RxDoubleArrowLeft fontSize={26} onClick={handleSidebar} style={{marginTop:'-20px'}}/>
                 </div>
             )}
             {openSidebar && (
                 <div className='RightSidebarResponsive'>
+                    
+                    <div className='RightSideBarMainDuplicate'>
                     <RxDoubleArrowRight fontSize={26} onClick={handleSidebar} style={{
                         marginLeft: '-12px',
-                        position: 'inherit',
+                        position: 'fixed',
+                        marginTop:'-20px',
+                        right: '265px',
+                        bottom: '140px'
                         }}/>
-                    <div className='RightSideBarMainDuplicate'>
                         <div className='LatestNotices'>
                             <h4>Latest Notices</h4>
                             {loading ?

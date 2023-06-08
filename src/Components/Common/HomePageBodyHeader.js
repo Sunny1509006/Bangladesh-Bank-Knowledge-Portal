@@ -11,7 +11,7 @@ const HomePageBodyHeader = ({title}) => {
         color: 'var(--primary-color)',
 
         padding: '5px',
-        margin: '10px 30px',
+        margin: '20px 30px',
         border: '1px solid #D9D9D9',
 
     }}>

@@ -68,7 +68,7 @@
     display: none;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
     .RightSideBarMain {
         display: none;
     }
@@ -87,7 +87,10 @@
         /* background: #EFFFF7; */
         background: white;
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-        margin-top: -200px;
+        /* margin-top: -300px; */
+        bottom: 0px;
+        position: fixed;
+        right: 0px;
         padding: 20px;
     
     }

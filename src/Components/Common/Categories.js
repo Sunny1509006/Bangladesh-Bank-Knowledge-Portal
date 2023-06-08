@@ -132,11 +132,11 @@ const Categories = ({ category, linkCategory }) => {
                                                             "/images/NoImageFound.png"
                                                         } />
                                                     </div>
-                                                    <p ><b >{article.title}</b></p>
-                                                    <p>Published Date: {article.created_at.slice(0, 10)}</p>
+                                                    <p style={{padding: '0px 15px'}}><b >{article.title}</b></p>
+                                                    <p style={{padding: '10px 15px'}}>Published Date: {article.created_at.slice(0, 10)}</p>
                                                 </Link>
                                                 <div className='ArticlesContentEachViews'></div>
-                                                <p style={{ color: 'rgba(0, 0, 0, .75)' }}>{article.count} views</p>
+                                                <p style={{ color: 'rgba(0, 0, 0, .75)', padding: '0px 15px' }}>{article.count} views</p>
                                             </div>
                                         ))
                                         }

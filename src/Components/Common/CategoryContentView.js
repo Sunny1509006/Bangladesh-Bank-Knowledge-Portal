@@ -27,7 +27,7 @@ const CategoryContentView = ({ category, categoryName }) => {
     const [article, setArticle] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const ebookURL = `https://bhumipedia.land.gov.bd/api/${category}/${params.id}`
+    const ebookURL = `https://139.59.60.50/api/${category}/${params.id}`
 
     const [showShare, setShowShare] = useState(false);
     const handleShareClick = () => {
@@ -72,7 +72,7 @@ const CategoryContentView = ({ category, categoryName }) => {
                                     onClick={handleShareClick}>
                                     Share
                                 </Button>
-                                <FaShareAlt color='#034E6F' style={{ padding: '4px 0px' }} onClick={handleShareClick} />
+                                <FaShareAlt color='#034E6F' style={{ padding: '4px 0px' }} onClick={handleShareClick} fontSize={24}/>
                                 {showShare && (
                                     <div style={{
                                         display: 'flex',
@@ -119,7 +119,7 @@ const CategoryContentView = ({ category, categoryName }) => {
                             {article.image ?
                                 <>
                                     {/* <img src={"http://127.0.0.1:8000/uploads/" + category + "/" + article.image} /> */}
-                                    <img src={"http://139.59.60.50/uploads/" + category + "/" + article.image} />
+                                    <img src={"http://139.59.60.50/uploads/" + category + "/" + article.image} style={{marginRight: '10px'}}/>
                                     <div dangerouslySetInnerHTML={{ __html: article.description }} />
                                 </>
                                 :
